@@ -1,0 +1,44 @@
+<style>
+    .dashboard {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        padding: 150px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        padding: 100px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .card-red {
+        background-color: #ff4d4d;
+        color: #ffffff;
+    }
+
+    .card-blue {
+        background-color: #4da6ff;
+        color: #ffffff;
+    }
+
+    .card-green {
+        background-color: #4dff88;
+        color: #ffffff;
+    }
+
+    .card-yellow {
+        background-color: #ffff4d;
+        color: #000000;
+    }
+
+    /* Styling for the clock */
+    .card-red .clock {
+        font-size: 48px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+</style>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP Address Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IP Address Calculator</h1>
+        <form action="calculate.php" method="post">
+            <label for="ip">Enter IP Address:</label>
+            <input type="text" id="ip" name="ip" required>
+
+            <label for="subnet">Enter Subnet Mask:</label>
+            <input type="text" id="subnet" name="subnet" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>

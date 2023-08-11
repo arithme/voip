@@ -1,0 +1,30 @@
+/* CSS for the menu */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+}
+
