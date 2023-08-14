@@ -1,0 +1,913 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 10, 2023 at 09:29 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ipphone`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `additional_data`
+--
+
+CREATE TABLE `additional_data` (
+  `id` int(11) NOT NULL,
+  `location` varchar(50) DEFAULT NULL,
+  `model_3905` int(11) DEFAULT NULL,
+  `model_6941` int(11) DEFAULT NULL,
+  `model_7821` int(11) DEFAULT NULL,
+  `dial_100` int(11) DEFAULT NULL,
+  `ps` int(11) DEFAULT NULL,
+  `ho` int(11) DEFAULT NULL,
+  `ci` int(11) DEFAULT NULL,
+  `helpdesk` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `additional_data`
+--
+
+INSERT INTO `additional_data` (`id`, `location`, `model_3905`, `model_6941`, `model_7821`, `dial_100`, `ps`, `ho`, `ci`, `helpdesk`) VALUES
+(4, 'PHQ/DHQ', 32, 44, 3, NULL, NULL, NULL, NULL, NULL),
+(5, 'RANCHI', 83, 1, 8, 8, 30, 49, 2, 2),
+(6, 'Lohardaga', 11, 1, 4, 4, 8, 3, NULL, NULL),
+(7, 'Simdega', 11, 1, 4, 4, 8, 2, 1, NULL),
+(8, 'Gumla', 16, 1, 4, 4, 12, 3, 1, NULL),
+(9, 'Khunti', 7, 1, 4, 4, 2, 4, 1, NULL),
+(10, 'Hazaribag', 24, 1, 8, 8, 13, 10, 1, NULL),
+(11, 'Giridih', 19, 1, 4, 4, 14, 3, 2, NULL),
+(12, 'Koderma', 10, 1, 4, 4, 7, 3, NULL, NULL),
+(13, 'Ramgarh', 8, 1, 4, 4, 5, 2, 1, NULL),
+(14, 'Chatra', 12, 1, 4, 4, 8, 2, 2, NULL),
+(15, 'Dhanbad', 31, 1, 8, 9, 17, 9, 5, NULL),
+(16, 'Bokaro', 18, 1, 8, 8, 13, 5, NULL, NULL),
+(17, 'Dumka', 16, 1, 8, 8, 10, 5, 1, NULL),
+(18, 'Godda', 17, 1, 4, 4, 13, 3, 1, NULL),
+(19, 'Sahibganj', 18, 1, 4, 4, 12, 5, 1, NULL),
+(20, 'Pakur', 11, 1, 4, 4, 7, 3, 1, NULL),
+(21, 'Deoghar', 15, 1, 8, 8, 12, 3, NULL, NULL),
+(22, 'Jamtara', 9, 1, 4, 4, 6, 3, NULL, NULL),
+(23, 'JamshedPur', 33, 1, 8, 8, 20, 11, 2, NULL),
+(24, 'Chaibasa', 23, 1, 4, 4, 19, 4, NULL, NULL),
+(25, 'Saraikeala', 10, 1, 4, 4, 8, 2, NULL, NULL),
+(26, 'Palamu', 21, 1, 4, 4, 13, 6, 2, NULL),
+(27, 'Garhwa', 22, 1, 4, 4, 18, 3, 1, NULL),
+(28, 'Latehar', 13, 1, 4, 4, 10, 3, NULL, NULL),
+(29, 'JWS-Netarhat', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(30, 'NOC ROOM', 24, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(31, 'STATE DIAL 100', 20, 2, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `all_ip_phones`
+--
+
+CREATE TABLE `all_ip_phones` (
+  `id` int(11) NOT NULL,
+  `BSNL_SSA` varchar(50) DEFAULT NULL,
+  `DISTRICT` varchar(50) DEFAULT NULL,
+  `LOCATION` varchar(50) DEFAULT NULL,
+  `PSHO` varchar(50) DEFAULT NULL,
+  `IPAddress` varchar(15) DEFAULT NULL,
+  `IPPhoneNo` varchar(10) DEFAULT NULL,
+  `ModelNo` varchar(20) DEFAULT NULL,
+  `SerialNo` varchar(20) DEFAULT NULL,
+  `InstallationStatus` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `all_ip_phones`
+--
+
+INSERT INTO `all_ip_phones` (`id`, `BSNL_SSA`, `DISTRICT`, `LOCATION`, `PSHO`, `IPAddress`, `IPPhoneNo`, `ModelNo`, `SerialNo`, `InstallationStatus`) VALUES
+(2, 'RCH', 'Ranchi', 'Hindpiri PS', 'PS', '10.93.30.229', '71252', 'CP-3905', 'FCH17318D72', 'Yes'),
+(3, 'RCH', 'Ranchi', ' Argora PS', 'PS', '10.93.2.120', '71253', 'CP-3905', 'FCH17309EGT', 'Yes'),
+(4, 'RCH', 'Ranchi', ' Bariatu PS', 'PS', '10.93.31.75', '71254', 'CP-3905', 'FCH17309066', 'Yes'),
+(5, 'RCH', 'Ranchi', 'Chutia PS', 'PS', '10.93.30.117', '71255', 'CP-3905', 'FCH17298H9R', 'Yes'),
+(6, 'RCH', 'Ranchi', ' D.Market', 'PS', '10.93.30.245', '71256', 'CP-3905', 'FCH17318DY2', 'Yes'),
+(7, 'RCH', 'Ranchi', 'Dhurwa ', 'PS', '10.93.1.215', '71257', 'CP-3905', 'FCH17298EK6', 'Yes'),
+(8, 'RCH', 'Ranchi', ' Doranda', 'PS', '10.93.1.195', '71258', 'CP-3905', 'FCH17308ZRK', 'Yes'),
+(9, 'RCH', 'Ranchi', 'Gonda', 'PS', '10.93.30.153', '71259', 'CP-3905', 'FCH1730902C', 'Yes'),
+(10, 'RCH', 'Ranchi', 'Jagarnathpur', 'PS', '10.93.2.101', '71260', 'CP-3905', 'FCH17309E2V', 'Yes'),
+(11, 'RCH', 'Ranchi', 'Kanke', 'PS', '10.93.31.56', '71261', 'CP-3905', 'FCH17318CCN', 'Yes'),
+(12, 'RCH', 'Ranchi', 'Lalpur', 'PS', '10.93.30.135', '71262', 'CP-3905', 'FCH17318CP3', 'Yes'),
+(13, 'RCH', 'Ranchi', 'LowerBazar', 'PS', '10.93.30.215', '71263', 'CP-3905', 'FCH17298EG2', 'Yes'),
+(14, 'RCH', 'Ranchi', 'Mandar', 'PS', '10.93.2.85', '71264', 'CP-3905', 'FCH17319R1Z', 'Yes'),
+(15, 'RCH', 'Ranchi', 'Namkum', 'PS', '10.93.2.152', '71265', 'CP-3905', 'FCH17319R67', 'Yes'),
+(16, 'RCH', 'Ranchi', 'Ratu', 'PS', '10.93.31.41', '71266', 'CP-3905', 'FCH17318C8R', 'Yes'),
+(17, 'RCH', 'Ranchi', 'ST/SC', 'PS', '10.93.30.166', '71267', 'CP-3905', 'FCH17318CQJ', 'Yes'),
+(18, 'RCH', 'Ranchi', 'Sukhdeo Nagar', 'PS', '10.93.31.22', '71268', 'CP-3905', 'FCH17298H7R', 'Yes'),
+(19, 'RCH', 'Ranchi', 'Sadar', 'PS', '10.93.31.6', '71269', 'CP-3905', 'FCH17318DT1', 'Yes'),
+(20, 'RCH', 'Ranchi', 'Tatisilway ', 'PS', '10.93.30.53', '71270', 'CP-3905', 'FCH17298H51', 'Yes'),
+(21, 'RCH', 'Ranchi', 'Traffic PS', 'PS', '10.93.30.25', '71271', 'CP-3905', 'FCH17318CGP', 'Yes'),
+(22, 'RCH', 'Ranchi', 'Ranchi Rail ', 'PS', '10.93.30.182', '71272', 'CP-3905', 'FCH17328BBN', 'Yes'),
+(23, 'RCH', 'Ranchi', 'Hatia Rail', 'PS', '10.93.2.131', '71273', 'CP-3905', 'FCH17319QX9', 'Yes'),
+(24, 'RCH', 'Ranchi', 'Muri Rail', 'PS', '10.93.31.246', '71274', 'CP-3905', 'FCH17308ZVT', 'Yes'),
+(25, 'RCH', 'Ranchi', 'Mahila PS', 'PS', '10.93.30.108', '71276', 'CP-3905', 'FCH17318CAE', 'Yes'),
+(26, 'RCH', 'Ranchi', 'Sonahatu', 'PS', '10.93.62.150', '71378', 'CP-3905', 'FCH17318BTS', 'Yes'),
+(27, 'RCH', 'Ranchi', 'Narkopi', 'PS', '10.93.62.131', '71379', 'CP-3905', 'FCH17318CQH', 'Yes'),
+(28, 'RCH', 'Ranchi', 'Ormanjhi', 'PS', '10.93.62.20', '71380', 'CP-3905', 'FCH17318C2H', 'Yes'),
+(29, 'RCH', 'Ranchi', 'Chanho', 'PS', '10.93.62.123', '71381', 'CP-3905', 'FCH17318C87', 'Yes'),
+(30, 'RCH', 'Ranchi', 'Pithoria', 'PS', '10.93.62.61', '71382', 'CP-3905', 'FCH17318CVC', 'Yes'),
+(31, 'RCH', 'Ranchi', 'Sadar West', 'CI', '10.93.30.152', '71376', 'CP-3905', 'FCH17318CKV', 'Yes'),
+(32, 'RCH', 'Ranchi', 'Mandar', 'CI', '10.93.2.86', '71377', 'CP-3905', 'FCH17318CGG', 'Yes'),
+(33, 'RCH', 'Ranchi', 'Central Store', 'HO', '10.93.31.120', '71275', 'CP-3905', 'FCH17328B0Z', 'Yes'),
+(34, 'RCH', 'Ranchi', 'Dy. SP Hatia', 'HO', '10.93.2.54', '71277', 'CP-3905', 'FCH17319SSP', 'Yes'),
+(35, 'RCH', 'Ranchi', 'IG, STF', 'HO', '', '71278', 'CP-3905', '', 'No'),
+(36, 'RCH', 'Ranchi', 'Dy. SP City', 'HO', '10.93.89.84', '71279', 'CP-3905', '', 'Yes'),
+(37, 'RCH', 'Ranchi', 'Dy. SP HQ1', 'HO', '10.93.89.82', '71280', 'CP-3905', 'FCH17318D2R', 'Yes'),
+(38, 'RCH', 'Ranchi', 'Dy. SP HQ2', 'HO', '10.93.89.76', '71281', 'CP-3905', 'FCH17319R6X', 'Yes'),
+(39, 'RCH', 'Ranchi', 'Dy. SP Kotwali', 'HO', '', '71282', 'CP-3905', '', 'Yes'),
+(40, 'RCH', 'Ranchi', 'SP Rural', 'HO', '10.93.89.85', '71283', 'CP-3905', 'FCH17319R41', 'Yes'),
+(41, 'RCH', 'Ranchi', 'S.P City', 'HO', '10.93.89.83', '71284', 'CP-3905', 'FCH17318C8K', 'Yes'),
+(42, 'RCH', 'Ranchi', ' ADG Wireless', 'HO', '10.93.30.73', '71285', 'CP-3905', 'FCH17319PZM', 'Yes'),
+(43, 'RCH', 'Ranchi', 'ADG, Vigilance', 'HO', '10.93.30.5', '71286', 'CP-3905', 'FCH17318C68', 'Yes'),
+(44, 'RCH', 'Ranchi', 'D.G Homeguard', 'HO', '10.93.1.229', '71287', 'CP-3905', 'FCH17318CFA', 'Yes'),
+(45, 'RCH', 'Ranchi', 'Dy. SP Khelari', 'HO', '', '71288', 'CP-3905', '', 'Yes'),
+(46, 'RCH', 'Ranchi', 'I.G Chhotanagpur', 'HO', '10.93.2.26', '71289', 'CP-3905', 'FCH17298H1Y', 'Yes'),
+(47, 'RCH', 'Ranchi', 'Police Line(HRMS)', 'HO', '10.93.89.50', '71290', 'CP-3905', 'FCH17319QU2', 'Yes'),
+(48, 'RCH', 'Ranchi', 'SCRB', 'HO', '10.93.2.199', '71291', 'CP-3905', 'FCH17318ECG', 'Yes'),
+(49, 'RCH', 'Ranchi', 'SFSL', 'HO', '10.93.31.133', '71292', 'CP-3905', 'FCH17318CVD', 'Yes'),
+(50, 'RCH', 'Ranchi', 'CO JAP-2,Tatisilwai', 'HO', '10.93.2.184', '71293', 'CP-3905', 'FCH17318D83', 'Yes'),
+(51, 'RCH', 'Ranchi', 'HQRT, Ranchi', 'HO', '10.93.32.165', '71294', 'CP-3905', 'FCH17318CVA', 'Yes'),
+(52, 'RCH', 'Ranchi', 'DIG, Chhotanagpur', 'HO', '10.93.2.38', '71295', 'CP-3905', 'FCH17319P5X', 'Yes'),
+(53, 'RCH', 'Ranchi', 'S.B Training Centre', 'HO', '10.93.2.185', '71296', 'CP-3905', '', 'Yes'),
+(54, 'RCH', 'Ranchi', 'S.P Traffic', 'HO', '10.93.30.26', '71297', 'CP-3905', '', 'Yes'),
+(55, 'RCH', 'Ranchi', 'S.P Residence', 'HO', '10.134.12.174', '71298', 'CP-3905', 'FCH17319QP3', 'Yes'),
+(56, 'RCH', 'Ranchi', 'ADG, Rail', 'HO', '10.93.32.232', '71299', 'CP-3905', 'FCH17309DKN', 'Yes'),
+(57, 'RCH', 'Ranchi', 'IG, Rail', 'HO', '10.93.32.233', '71375', 'CP-3905', '', 'Yes'),
+(58, 'RCH', 'Ranchi', 'Chairman', 'HO', '10.93.30.76', '71351', 'CP-3905', 'FCH17328B5S', 'Yes'),
+(59, 'RCH', 'Ranchi', 'Managing Director', 'HO', '10.93.30.77', '71352', 'CP-3905', 'FCH17319NW8', 'Yes'),
+(60, 'RCH', 'Ranchi', 'SP CID(First)', 'HO', '10.93.32.226', '71353', 'CP-3905', 'FCH17298GT7', 'Yes'),
+(61, 'RCH', 'Ranchi', 'SP CID(Second)', 'HO', '10.93.32.227', '71354', 'CP-3905', 'FCH17298GWF', 'Yes'),
+(62, 'RCH', 'Ranchi', 'SP CID(Third)', 'HO', '10.93.32.228', '71355', 'CP-3905', 'FCH17309EDW', 'Yes'),
+(63, 'RCH', 'Ranchi', 'SP CID(ITS)', 'HO', '10.93.32.229', '71356', 'CP-3905', 'FCH17319R5T', 'Yes'),
+(64, 'RCH', 'Ranchi', 'SP CID(Prabhari)', 'HO', '10.93.32.230', '71357', 'CP-3905', 'FCH17298EN0', 'Yes'),
+(65, 'RCH', 'Ranchi', 'DSP(Head Quarter)', 'HO', '10.93.32.234', '71358', 'CP-3905', 'FCH2145F1J6', 'Yes'),
+(66, 'RCH', 'Ranchi', 'DIG Wireless', 'HO', '10.93.30.68', '71359', 'CP-3905', '', 'Yes'),
+(67, 'RCH', 'Ranchi', 'SP Wireless', 'HO', '10.93.30.69', '71360', 'CP-3905', '', 'Yes'),
+(68, 'RCH', 'Ranchi', 'DSP Wireless', 'HO', '10.93.30.70', '71361', 'CP-3905', '', 'Yes'),
+(69, 'RCH', 'Ranchi', 'SP ATS', 'HO', '10.93.32.34', '71362', 'CP-3905', 'FCH17309DHL', 'Yes'),
+(70, 'RCH', 'Ranchi', 'DSP-1 ATS ', 'HO', '10.93.32.35', '71363', 'CP-3905', 'FCH17319PAM', 'Yes'),
+(71, 'RCH', 'Ranchi', 'DSP-2 ATS ', 'HO', '10.93.32.36', '71364', 'CP-3905', '', 'Yes'),
+(72, 'RCH', 'Ranchi', 'DSP-3 ATS ', 'HO', '10.93.32.37', '71365', 'CP-3905', '', 'Yes'),
+(73, 'RCH', 'Ranchi', 'DSP-4 ATS ', 'HO', '', '71366', 'CP-3905', '', 'No'),
+(74, 'RCH', 'Ranchi', 'DSP-5 ATS ', 'HO', '', '71367', 'CP-3905', '', 'No'),
+(75, 'RCH', 'Ranchi', 'DSP-6 ATS ', 'HO', '', '71368', 'CP-3905', '', 'No'),
+(76, 'RCH', 'Ranchi', 'Data Centre ATS', 'HO', '', '71369', 'CP-3905', '', 'No'),
+(77, 'RCH', 'Ranchi', 'IG  JJ', 'HO', '', '71370', 'CP-3905', '', 'No'),
+(78, 'RCH', 'Ranchi', 'DIG  JJ', 'HO', '', '71371', 'CP-3905', '', 'No'),
+(79, 'RCH', 'Ranchi', 'SP JJ(Admn/Operation)', 'HO', '', '71372', 'CP-3905', '', 'No'),
+(80, 'RCH', 'Ranchi', 'SP JJ(Admn/Operation)', 'HO', '', '71373', 'CP-3905', '', 'No'),
+(81, 'RCH', 'Ranchi', 'DSP JJ', 'HO', '', '71374', 'CP-3905', '', 'No'),
+(82, 'RCH', 'Ranchi', 'Helpdesk', 'HO', '10.93.89.100', '77777', 'CP-3905', 'FCH17318E43', 'Yes'),
+(83, 'RCH', 'Ranchi', 'Helpdesk', 'HO', '10.93.89.101', '77778', 'CP-3905', 'FCH17309E96', 'Yes'),
+(84, 'RCH', 'Lohardaga', 'Nagar PS', 'PS', '10.93.48.168', '74021', 'CP-3905', 'FCH17298H3W', 'Yes'),
+(85, 'RCH', 'Lohardaga', 'Kuru PS', 'PS', '10.93.48.103', '74022', 'CP-3905', 'FCH17309E0F', 'Yes'),
+(86, 'RCH', 'Lohardaga', 'Senha PS', 'PS', '10.93.48.23', '74023', 'CP-3905', 'FCH17318CRZ', 'Yes'),
+(87, 'RCH', 'Lohardaga', 'Bhandra PS', 'PS', '10.93.48.39', '74024', 'CP-3905', 'FCH17318CV8', 'Yes'),
+(88, 'RCH', 'Lohardaga', 'Kisko PS', 'PS', '10.93.48.135', '74025', 'CP-3905', 'FCH17309EBY', 'Yes'),
+(89, 'RCH', 'Lohardaga', 'Kairo', 'PS', '10.93.62.245', '74030', 'CP-3905', 'FCH17319QKR', 'Yes'),
+(90, 'RCH', 'Lohardaga', 'Bagru', 'PS', '10.93.48.116', '74031', 'CP-3905', 'FCH17308ZRD', 'Yes'),
+(91, 'RCH', 'Lohardaga', 'Jobang', 'PS', '10.93.62.230', '74032', 'CP-3905', '', 'Yes'),
+(92, 'RCH', 'Lohardaga', 'Dy SP HQ', 'HO', '10.134.12.185', '74026', 'CP-3905', '', 'Yes'),
+(93, 'RCH', 'Lohardaga', 'SDPO Lohardaga', 'HO', '10.134.11.36', '74027', 'CP-3905', '', 'Yes'),
+(94, 'RCH', 'Lohardaga', 'S.P Residence', 'HO', '10.93.48.86', '74028', 'CP-3905', 'FCH17318CZ5', 'Yes'),
+(95, 'RCH', 'Simdega', ' Nagar PS ', 'PS', '10.93.50.150', '73421', 'CP-3905', 'FCH17318BYN', 'yes'),
+(96, 'RCH', 'Simdega', 'Muffasil', 'PS', '10.93.50.151', '73422', 'CP-3905', 'FCH17318DT2', 'yes'),
+(97, 'RCH', 'Simdega', 'Bano ', 'PS', '10.93.50.21', '73425', 'CP-3905', 'FCH17319S38', 'yes'),
+(98, 'RCH', 'Simdega', 'Kersai', 'PS', '10.93.63.196', '73427', 'CP-3905', '', 'yes'),
+(99, 'RCH', 'Simdega', 'Jaldega', 'PS', '10.93.63.187', '73428', 'CP-3905', 'FCH17298ESB', 'yes'),
+(100, 'RCH', 'Simdega', 'Bolba', 'PS', '', '73429', 'CP-3905', '', 'NO'),
+(101, 'RCH', 'Simdega', 'Kolebira', 'PS', '', '73430', 'CP-3905', '', 'NO'),
+(102, 'RCH', 'Simdega', 'Pakartand', 'PS', '', '73431', 'CP-3905', '', 'NO'),
+(103, 'RCH', 'Simdega', 'Bano', 'CI', '10.93.50.36', '73426', 'CP-3905', 'FCH17309D4M', 'yes'),
+(104, 'RCH', 'Simdega', 'S.P.Residence', 'HO', '10.93.48.86', '73424', 'CP-3905', 'FCH2223DD6U', 'yes'),
+(105, 'RCH', 'Simdega', 'SDPO Simdega', 'HO', '', '73423', 'CP-3905', '', 'yes'),
+(106, 'RCH', 'Gumla', ' Nagar PS ', 'PS', '10.93.49.117', '72421', 'CP-3905', 'FCH17318DAA', 'Yes'),
+(107, 'RCH', 'Gumla', 'Palkot', 'PS', '10.93.49.54', '72422', 'CP-3905', 'FCH17298ESE', 'Yes'),
+(108, 'RCH', 'Gumla', 'Kamdara ', 'PS', '10.93.49.67', '72423', 'CP-3905', '', 'Yes'),
+(109, 'RCH', 'Gumla', 'Ghagra', 'PS', '10.93.49.82', '72426', 'CP-3905', 'FCH17318CEC', 'Yes'),
+(110, 'RCH', 'Gumla', 'Sisai', 'PS', '10.93.63.20', '72429', 'CP-3905', 'FCH17319PXH', 'Yes'),
+(111, 'RCH', 'Gumla', 'Bharno', 'PS', '10.93.63.28', '72430', 'CP-3905', 'FCH17309DBC', 'Yes'),
+(112, 'RCH', 'Gumla', 'Raidih', 'PS', '10.93.63.78', '72431', 'CP-3905', 'FCH17309DJP', 'Yes'),
+(113, 'RCH', 'Gumla', 'Bishunpur', 'PS', '', '72432', 'CP-3905', '', 'No'),
+(114, 'RCH', 'Gumla', 'Dumri', 'PS', '', '72433', 'CP-3905', '', 'NO'),
+(115, 'RCH', 'Gumla', 'Kurumgarh', 'PS', '', '72434', 'CP-3905', '', 'NO'),
+(116, 'RCH', 'Gumla', 'Sursang', 'PS', '', '72435', 'CP-3905', '', 'NO'),
+(117, 'RCH', 'Gumla', 'Gurdari', 'PS', '', '72436', 'CP-3905', '', 'NO'),
+(118, 'RCH', 'Gumla', 'SDPO', 'HO', '10.93.49.18', '72424', 'CP-3905', 'FCH17318CC3', 'Yes'),
+(119, 'RCH', 'Gumla', 'S.P Residence', 'HO', '10.134.12.195', '72425', 'CP-3905', 'FCH17318CTS', 'Yes'),
+(120, 'RCH', 'Gumla', 'DSP HQ', 'HO', '10.134.11.156', '72427', 'CP-3905', 'FCH17318CKR', 'Yes'),
+(121, 'RCH', 'Gumla', 'Gumla', 'CI', '10.93.49.5', '72428', 'CP-3905', 'FCH17318CVF', 'Yes'),
+(122, 'RCH', 'Khunti', 'Khunti Nagar ps', 'PS', '10.93.34.68', '71021', 'CP-3905', '', 'Yes'),
+(123, 'RCH', 'Khunti', 'Murhu', 'PS', '10.93.34.55', '71022', 'CP-3905', 'FCH17319QNA', 'Yes'),
+(124, 'RCH', 'Khunti', 'SDPO ', 'HO', '10.93.34.37', '71023', 'CP-3905', 'FCH17318ECV', 'Yes'),
+(125, 'RCH', 'Khunti', 'S.P Residence', 'HO', '10.93.34.5', '71024', 'CP-3905', 'FCH17319PK0', 'Yes'),
+(126, 'RCH', 'Khunti', 'Khunti ', 'CI', '10.93.34.85', '71025', 'CP-3905', '', 'Yes'),
+(127, 'RCH', 'Khunti', 'DSP HQ', 'HO', '', '71026', 'CP-3905', '', 'Yes'),
+(128, 'RCH', 'Khunti', 'Police Line ', 'HO', '', '', 'CP-3905', '', 'Link Down'),
+(129, 'HZB', 'Hazaribagh', 'Hazaribag Sadar P.S', 'PS', '10.93.38.52', '74441', 'CP-3905', 'FCH17298EM9', 'Yes'),
+(130, 'HZB', 'Hazaribagh', 'Charhi ', 'PS', '10.93.39.133', '74442', 'CP-3905', 'FCH17298EM9', 'Yes'),
+(131, 'HZB', 'Hazaribagh', 'Ichak', 'PS', '10.93.38.165', '74443', 'CP-3905', 'FCH17318CK6', 'Yes'),
+(132, 'HZB', 'Hazaribagh', 'Barkagaon ', 'PS', '10.93.39.5', '74444', 'CP-3905', 'FCH17309088', 'Yes'),
+(133, 'HZB', 'Hazaribagh', 'Bishnugarh  ', 'PS', '', '74445', 'CP-3905', 'FCH17318C0E', 'Yes'),
+(134, 'HZB', 'Hazaribagh', 'Barhi  ', 'PS', '10.93.38.150', '74446', 'CP-3905', 'FCH17309062', 'Yes'),
+(135, 'HZB', 'Hazaribagh', 'Barkatha  ', 'PS', '10.93.38.230', '74447', 'CP-3905', 'FCH17309E46', 'Yes'),
+(136, 'HZB', 'Hazaribagh', 'Giddi  ', 'PS', '10.93.39.38', '74448', 'CP-3905', 'FCH17318CLG', 'Yes'),
+(137, 'HZB', 'Hazaribagh', 'Tati Jhariya', 'PS', '10.93.39.53', '74449', 'CP-3905', 'FCH17318CTV', 'Yes'),
+(138, 'HZB', 'Hazaribagh', 'Gorhar', 'PS', '', '74461', 'CP-3905', 'FCH173090AL', 'Yes'),
+(139, 'HZB', 'Hazaribagh', 'Chauparan', 'PS', '10.93.38.215', '74462', 'CP-3905', 'FCH17319QYH', 'Yes'),
+(140, 'HZB', 'Hazaribagh', 'Ango  ', 'PS', '10.93.67.230', '74463', 'CP-3905', 'FCH17319R77', 'Yes'),
+(141, 'HZB', 'Hazaribagh', 'Chalkusa', 'PS', '', '', 'CP-3905', '', 'No'),
+(142, 'HZB', 'Hazaribagh', 'Barhi  ', 'CI', '10.93.38.195', '74860', 'CP-3905', 'FCH17319NQH', 'Yes'),
+(143, 'HZB', 'Hazaribagh', 'Dy SP-1', 'HO', '10.93.38.98', '74450', 'CP-3905', 'FCH17319QXC', 'yes'),
+(144, 'HZB', 'Hazaribagh', 'Add. SP', 'HO', '10.93.38.82', '74451', 'CP-3905', 'FCH17319SUY', 'yes'),
+(145, 'HZB', 'Hazaribagh', 'DySP (PCR)', 'HO', '', '74452', 'CP-3905', 'FCH17318BXS', 'yes'),
+(146, 'HZB', 'Hazaribagh', 'JAPTC Padma', 'HO', '', '74454', 'CP-3905', 'FCH17319R54', 'yes'),
+(147, 'HZB', 'Hazaribagh', 'SDPO, Barhi', 'HO', '10.93.39.212', '74455', 'CP-3905', 'FCH17319QYW', 'yes'),
+(148, 'HZB', 'Hazaribagh', 'SP Residence', 'HO', '10.134.13.51', '74456', 'CP-3905', 'FCH17318CJU', 'yes'),
+(149, 'HZB', 'Hazaribagh', 'Police Line', 'HO', '10.93.39.227', '74457', 'CP-3905', 'FCH17318CU9', 'yes'),
+(150, 'HZB', 'Hazaribagh', 'Dy. SP HQ-2/PTC', 'HO', '', '74458', 'CP-3905', '', 'yes'),
+(151, 'HZB', 'Hazaribagh', 'D.I.G.', 'HO', '10.93.38.68', '74459', 'CP-3905', 'FCH17319R2Y', 'Yes'),
+(152, 'HZB', 'Hazaribagh', 'JAP-7,Hazaribagh', 'HO', '10.93.38.130', '74460', 'CP-3905', 'FCH17318DED', 'Yes'),
+(153, 'HZB', 'Giridih', 'Nagar P.S', 'PS', '10.93.58.143', '74821', 'CP-3905', 'FCH17319R55', 'Yes'),
+(154, 'HZB', 'Giridih', 'Pirtand', 'PS', '10.93.58.66', '74822', 'CP-3905', 'FCH17309DWS', 'Yes'),
+(155, 'HZB', 'Giridih', 'Herodih', 'PS', '', '74824', 'CP-3905', 'FCH17309E97', 'Yes'),
+(156, 'HZB', 'Giridih', 'Sariya  ', 'PS', '10.93.58.194', '74823', 'CP-3905', 'FCH17318CTT', 'Yes'),
+(157, 'HZB', 'Giridih', 'Dumri  ', 'PS', '10.93.58.36', '74825', 'CP-3905', 'FCH17319R1U', 'Yes'),
+(158, 'HZB', 'Giridih', 'Muffasil', 'PS', '10.93.58.3', '74826', 'CP-3905', 'FCH17309E39', 'Yes'),
+(159, 'HZB', 'Giridih', 'Gandey', 'PS', '10.93.68.86', '74827', 'CP-3905', 'FCH17318CBS', 'Yes'),
+(160, 'HZB', 'Giridih', 'Ahilyapur', 'PS', '10.93.68.195', '74828', 'CP-3905', 'FCH17309DGS', 'Yes'),
+(161, 'HZB', 'Giridih', 'Birni', 'PS', '10.93.68.115', '74829', 'CP-3905', '', 'Yes'),
+(162, 'HZB', 'Giridih', 'Lokai Nayanpur', 'PS', '10.93.68.163', '74830', 'CP-3905', '', 'Yes'),
+(163, 'HZB', 'Giridih', 'Taratand', 'PS', '', '74831', 'CP-3905', '', 'Yes'),
+(164, 'HZB', 'Giridih', 'Nimiyaghat', 'PS', '10.93.68.124', '74832', 'CP-3905', 'FCH17318C2F', 'Yes'),
+(165, 'HZB', 'Giridih', 'Bhelvaghaty', 'PS', '', '74833', 'CP-3905', '', 'NO'),
+(166, 'HZB', 'Giridih', 'Madhuban (khukra)', 'PS', '10.93.68.139', '74834', 'CP-3905', 'FCH17298ER0', 'Yes'),
+(167, 'HZB', 'Giridih', 'S.D.P.O.', 'HO', '10.134.12.70', '74803', 'CP-3905', 'FCH17318ECL', 'Yes'),
+(168, 'HZB', 'Giridih', 'Police Line', 'HO', '10.134.12.67', '74804', 'CP-3905', 'FCH2033GMRE', 'Yes'),
+(169, 'HZB', 'Giridih', 'SP RES', 'HO', '10.134.13.102', '74805', 'CP-3905', 'FCH17309DBR', 'Yes'),
+(170, 'HZB', 'Giridih', 'Jamua', 'CI', '10.93.58.181', '74806', 'CP-3905', 'FCH17318DJZ', 'Yes'),
+(171, 'HZB', 'Giridih', 'Sariya  ', 'CI', '10.93.58.211', '74807', 'CP-3905', 'FCH17298H4D', 'Yes'),
+(172, 'HZB', 'Koderma', 'Nagar P.S', 'PS', '10.93.56.133', '74621', 'CP-3905', 'FCH17318D8M', 'Yes'),
+(173, 'HZB', 'Koderma', 'Tilaiya ', 'PS', '10.93.56.85', '74623', 'CP-3905', 'FCH17309DGR', 'Yes'),
+(174, 'HZB', 'Koderma', 'Chandwara  ', 'PS', '10.93.56.100', '74622', 'CP-3905', 'FCH17309DK7', 'Yes'),
+(175, 'HZB', 'Koderma', 'Rail PS', 'PS', '', '', 'CP-3905', '', 'No'),
+(176, 'HZB', 'Koderma', 'Satgawan', 'PS', '10.93.56.116', '74608', 'CP-3905', 'FCH17298GSE', 'Yes'),
+(177, 'HZB', 'Koderma', 'Markacho', 'PS', '10.93.56.146', '74609', 'CP-3905', 'FCH17308ZJZ', 'Yes'),
+(178, 'HZB', 'Koderma', 'Dhab ', 'PS', '10.93.67.243', '74610', 'CP-3905', '', 'Yes'),
+(179, 'HZB', 'Koderma', 'SP Res', 'HO', '10.134.13.84', '74605', 'CP-3905', 'FCH17318CSL', 'Yes'),
+(180, 'HZB', 'Koderma', 'Police Line', 'HO', '10.93.56.194', '74606', 'CP-3905', 'FCH17309DG5', 'Yes'),
+(181, 'HZB', 'Koderma', 'SDPO', 'HO', '10.93.56.4', '74607', 'CP-3905', 'FCH17319P99', 'Yes'),
+(182, 'HZB', 'Ramgarh', 'Ramgarh Nagar P.S', 'PS', '10.93.33.21', '72021', 'CP-3905', 'FCH17318BTC', 'Yes'),
+(183, 'HZB', 'Ramgarh', 'Patratu ', 'PS', '10.93.33.37', '72022', 'CP-3905', 'FCH17319R66', 'Yes'),
+(184, 'HZB', 'Ramgarh', 'Basal  ', 'PS', '10.93.33.70', '72023', 'CP-3905', 'FCH17308Z9H', 'Yes'),
+(185, 'HZB', 'Ramgarh', 'Mandu', 'PS', '10.93.33.4', '72027', 'CP 3905', 'FCH17298H4X', 'Yes'),
+(186, 'HZB', 'Ramgarh', 'Barkakana DNB Rail', 'PS', '10.93.33.179', '72026', 'CP-3905', 'FCH17318CQQ', 'Yes'),
+(187, 'HZB', 'Ramgarh', 'Police Line', 'HO', '10.93.33.245', '72024', 'CP-3905', 'PUC17190KLB?', 'Yes'),
+(188, 'HZB', 'Ramgarh', 'Patratu ', 'CI', '10.93.33.52', '72025', 'CP-3905', 'FCH17308ZPZ', 'Yes'),
+(189, 'HZB', 'Ramgarh', 'SDPO ', 'HO', '10.93.33.166', '72005', 'CP-3905', 'FCH17309DJZ', 'Yes'),
+(190, 'HZB', 'Chatra', 'Chatra Sadar P.S', 'PS', '10.93.51.148', '70421', 'CP-3905', 'FCH173180BL', 'yes'),
+(191, 'HZB', 'Chatra', 'Pathalgadda', 'PS', '10.93.68.234', '70424', 'CP-3905', 'FCH17318CDK', 'yes'),
+(192, 'HZB', 'Chatra', 'Bashishtnagar', 'PS', '10.93.68.242', '70425', 'CP-3905', 'FCH17319R2P', 'yes'),
+(193, 'HZB', 'Chatra', 'Piparwar', 'PS', '10.93.51.133', '70426', 'CP-3905', 'FCH17308ZBE', 'yes'),
+(194, 'HZB', 'Chatra', 'Kunda', 'PS', '', '70427', 'CP-3905', '', 'No'),
+(195, 'HZB', 'Chatra', 'Lawaloung', 'PS', '10.93.69.10', '70428', 'CP-3905', 'FCH17319PQ5', 'yes'),
+(196, 'HZB', 'Chatra', 'Rajpur', 'PS', '', '70429', 'CP-3905', '', 'No'),
+(197, 'HZB', 'Chatra', 'MayurHand', 'PS', '10.93.69.42', '70430', 'CP-3905', 'FCH17319R6G', 'yes'),
+(198, 'HZB', 'Chatra', 'Simarya', 'CI', '10.93.51.52', '70422', 'CP-3905', 'FCH17308ZUN', 'yes'),
+(199, 'HZB', 'Chatra', 'Pratap Pur', 'CI', '10.93.51.34', '70423', 'CP-3905', 'FCH17318CQK', 'yes'),
+(200, 'HZB', 'Chatra', 'Dy SP Office', 'HO', '10.93.51.18', '70403', 'CP-3905', 'FCH17309DBK', 'Yes'),
+(201, 'HZB', 'Chatra', 'S.P Residence', 'HO', '10.134.13.66', '70405', 'CP-3905', 'FCH17309EDP', 'Yes'),
+(202, 'DHN', 'Dhanbad', 'Nagar PS', 'PS', '172.16.85.3', '70251', 'CP-3905', 'FCH17309EH0', 'Yes'),
+(203, 'DHN', 'Dhanbad', 'Saraidhela ', 'PS', '172.16.86.179', '70252', 'CP-3905', 'FCH17328BBT', 'Yes'),
+(204, 'DHN', 'Dhanbad', 'Barwada', 'PS', '172.16.86.131', '70253', 'CP-3905', 'FCH17309DJF', 'Yes'),
+(205, 'DHN', 'Dhanbad', 'Katras', 'PS', '172.16.86.211', '70254', 'CP-3905', 'FCH17328BD1', 'Yes'),
+(206, 'DHN', 'Dhanbad', 'Bankmore', 'PS', '172.16.86.147', '70255', 'CP-3905', 'FCH17328B6Z', 'Yes'),
+(207, 'DHN', 'Dhanbad', 'Putki', 'PS', '172.16.86.195', '70256', 'CP-3905', 'FCH17318CBZ', 'Yes'),
+(208, 'DHN', 'Dhanbad', 'Kenduadih', 'PS', '172.16.87.51', '70257', 'CP-3905', 'FCH17328B1J', 'Yes'),
+(209, 'DHN', 'Dhanbad', 'Patherdih', 'PS', '172.16.87.19', '70258', 'CP-3905', 'FCH17308ZLS', 'Yes'),
+(210, 'DHN', 'Dhanbad', 'Sindri  ', 'PS', '172.16.86.243', '70259', 'CP-3905', 'FCH17309DNA', 'Yes'),
+(211, 'DHN', 'Dhanbad', 'Govindpur  ', 'PS', '172.16.87.35', '70260', 'CP-3905', 'FCH17328BMN', 'Yes'),
+(212, 'DHN', 'Dhanbad', 'Jogta', 'PS', '172.16.86.227', '70261', 'CP-3905', 'FCH17328AXR', 'Yes'),
+(213, 'DHN', 'Dhanbad', 'Rail', 'PS', '172.16.85.19', '70262', 'CP-3905', 'FCH17328BD4', 'Yes'),
+(214, 'DHN', 'Dhanbad', 'Barora ', 'PS', '172.16.86.83', '70269', 'CP-3905', 'FCH17328B5R', 'Yes'),
+(215, 'DHN', 'Dhanbad', 'Jorapokhar  ', 'PS', '172.16.87.3', '70270', 'CP-3905', 'FCH17328BC0', 'Yes'),
+(216, 'DHN', 'Dhanbad', 'Dhansar ', 'PS', '172.16.86.163', '70271', 'CP-3905', 'FCH17328BOC', 'Yes'),
+(217, 'DHN', 'Dhanbad', 'Maniyadih', 'PS', '172.16.86.99', '70280', 'CP-3905', 'FCH17318CT2', 'Yes'),
+(218, 'DHN', 'Dhanbad', 'Purwi Tundi', 'PS', '172.16.86.115', '70281', 'CP-3905', 'FCH17309D1B', 'Yes'),
+(219, 'DHN', 'Dhanbad', 'Sindri  ', 'CI', '172.16.88.131', '70273', 'CP-3905', 'FCH17318CNP', 'Yes'),
+(220, 'DHN', 'Dhanbad', 'BankMore', 'CI', '172.16.88.115', '70276', 'CP-3905', 'FCH17298H3N', 'Yes'),
+(221, 'DHN', 'Dhanbad', 'Jorapokhar  ', 'CI', '172.16.87.114', '70277', 'CP-3905', 'FCH17319R5C', 'Yes'),
+(222, 'DHN', 'Dhanbad', 'Govindpur  ', 'CI', '172.16.88.146', '70278', 'CP-3905', 'FCH17298EEJ', 'Yes'),
+(223, 'DHN', 'Dhanbad', 'Katras', 'CI', '172.16.87.179', '70279', 'CP-3905', 'FCH17318E7K', 'Yes'),
+(224, 'DHN', 'Dhanbad', 'Dy. SP HQ 1', 'HO', '172.16.88.4', '70263', 'CP-3905', 'FCH17298EQZ', 'Yes'),
+(225, 'DHN', 'Dhanbad', 'Dy. SP HQ-2', 'HO', '172.16.88.20', '70264', 'CP-3905', 'FCH17318CS1', 'Yes'),
+(226, 'DHN', 'Dhanbad', 'JAP-3,Dhanbad', 'HO', '172.16.88.35', '70265', 'CP-3905', 'FCH17318BSM', 'Yes'),
+(227, 'DHN', 'Dhanbad', 'SP Rail', 'HO', '172.16.88.51', '70266', 'CP-3905', 'FCH17309EKU', 'Yes'),
+(228, 'DHN', 'Dhanbad', 'SDPO Sindri', 'HO', '172.16.88.99', '70267', 'CP-3905', 'FCH17318CFK', 'Yes'),
+(229, 'DHN', 'Dhanbad', 'S.P Residence', 'HO', '10.93.36.22', '70268', 'CP-3905', 'FCH17318CQL', 'Yes'),
+(230, 'DHN', 'Dhanbad', 'Dy SP Law & Order', 'HO', '172.16.87.244', '70272', 'CP-3905', 'FCH2126D9AB', 'Yes'),
+(231, 'DHN', 'Dhanbad', 'SP CITY', 'HO', '10.93.35.70', '70274', 'CP-3905', 'FCH17318C35', 'Yes'),
+(232, 'DHN', 'Dhanbad', 'SP Rural', 'HO', '10.93.35.71', '70275', 'CP-3906', 'FCH17318C9B', 'Yes'),
+(233, 'DHN', 'Bokaro', 'B.S City', 'PS', '172.16.82.243', '70851', 'CP-3905', 'FCH17298GST', 'Yes'),
+(234, 'DHN', 'Bokaro', 'Sector VI', 'PS', '172.16.83.195', '70852', 'CP-3905', 'FCH17318D9U', 'Yes'),
+(235, 'DHN', 'Bokaro', 'Sector IV', 'PS', '172.16.83.115', '70853', 'CP-3905', 'FCH17328BQC', 'Yes'),
+(236, 'DHN', 'Bokaro', 'Chas  ', 'PS', '172.16.83.163', '70854', 'CP-3905', 'FCH17319P67', 'Yes'),
+(237, 'DHN', 'Bokaro', 'Sector XII', 'PS', '172.16.83.179', '70855', 'CP-3905', 'FCH17318D31', 'Yes'),
+(238, 'DHN', 'Bokaro', 'Rail', 'PS', '172.16.83.211', '70856', 'CP-3905', 'FCH17308ZRL', 'Yes'),
+(239, 'DHN', 'Bokaro', 'Balidih ', 'PS', '172.16.83.147', '70857', 'CP-3905', 'FCH17309DKJ', 'Yes'),
+(240, 'DHN', 'Bokaro', 'Harla (IX)', 'PS', '172.16.83.131', '70858', 'CP-3905', 'FCH17309DCL', 'Yes'),
+(241, 'DHN', 'Bokaro', 'Chas (M)', 'PS', '172.16.83.3', '70865', 'CP-3906', 'FCH17309EAR', 'Yes'),
+(242, 'DHN', 'Bokaro', 'Pindrajora', 'PS', '172.16.83.35', '70866', 'CP-3907', 'FCH17318BXB', 'Yes'),
+(243, 'DHN', 'Bokaro', 'Mahuatand', 'PS', '', '70867', 'CP-3908', '', 'NO'),
+(244, 'DHN', 'Bokaro', 'I.E. L.', 'PS', '172.16.82.227', '70868', 'CP-3909', 'FCH17298GRN', 'Yes'),
+(245, 'DHN', 'Bokaro', 'Siyaljori', 'PS', '172.16.83.19', '70869', 'CP-3910', 'FCH17318CJ1', 'Yes'),
+(246, 'DHN', 'Bokaro', 'D.I.G. BOKARO', 'HO', '172.16.84.147', '70860', 'CP-3905', 'FCH17318C6C', 'Yes'),
+(247, 'DHN', 'Bokaro', 'Dy SP(HQ)', 'HO', '172.16.84.164', '70861', 'CP-3905', '', 'Yes'),
+(248, 'DHN', 'Bokaro', 'JAP-4,Bokaro', 'HO', '172.16.84.179', '70862', 'CP-3905', '', 'Yes'),
+(249, 'DHN', 'Bokaro', 'SP Residence', 'HO', '10.134.12.231', '70863', 'CP-3905', 'FCH17328BBM', 'Yes'),
+(250, 'DHN', 'Bokaro', 'Police Line', 'HO', '172.16.84.195', '70864', 'CP-3905', 'FCH17298GTP', 'Yes'),
+(251, 'DMK', 'Dumka', 'Dumka Nagar P.S. ', 'PS', '10.93.45.69', '72241', 'CP-3905', 'FCH17318DCP', 'Yes'),
+(252, 'DMK', 'Dumka', 'Muffasil  ', 'PS', '10.93.45.147', '72242', 'CP-3905', 'FCH17309DMJ', 'Yes'),
+(253, 'DMK', 'Dumka', 'Masalia ', 'PS', '10.93.45.229', '72244', 'CP-3905', 'FCH17318C4Q', 'Yes'),
+(254, 'DMK', 'Dumka', 'Ramgarh  ', 'PS', '', '', 'CP-3905', '', 'No'),
+(255, 'DMK', 'Dumka', 'Sikaripara', 'PS', '10.93.45.211', '72251', 'CP-3905', 'FCH17318CQQ', 'Yes'),
+(256, 'DMK', 'Dumka', 'Raneshwar', 'PS', '10.93.70.211', '72252', 'CP-3905', 'FCH17309CZF', 'Yes'),
+(257, 'DMK', 'Dumka', 'Kathikund', 'PS', '10.93.71.43', '72253', 'CP-3905', '', 'Yes'),
+(258, 'DMK', 'Dumka', 'Tongra', 'PS', '', '72254', 'CP-3905', '', 'No'),
+(259, 'DMK', 'Dumka', 'Taljhari', 'PS', '10.93.71.3', '72255', 'CP-3905', 'FCH17318CDB', 'Yes'),
+(260, 'DMK', 'Dumka', 'Gopikander', 'PS', '', '72256', 'CP-3905', '', 'No'),
+(261, 'DMK', 'Dumka', 'Sadar', 'CI', '10.93.45.242', '72250', 'CP-3905', '', 'Yes'),
+(262, 'DMK', 'Dumka', 'D.I.G Santhalpragna', 'HO', '10.93.45.100', '72245', 'CP-3905', 'FCH17309DB3', 'Yes'),
+(263, 'DMK', 'Dumka', 'Dy Sp HQ-1', 'HO', '10.93.45.133', '72246', 'CP-3905', 'FCH17298EVG', 'Yes'),
+(264, 'DMK', 'Dumka', 'Dy Sp HQ-2', 'HO', '10.93.45.116', '72247', 'CP-3905', 'FCH17318ECS', 'Yes'),
+(265, 'DMK', 'Dumka', 'SP Residence', 'HO', '10.134.13.166', '72248', 'CP-3905', 'FCH17319TFE', 'Yes'),
+(266, 'DMK', 'Dumka', 'Police Line', 'HO', '10.93.45.163', '72249', 'CP-3905', 'FCH2205EHGR', 'Yes'),
+(267, 'DMK', 'Godda', 'Godda Nagar P.S ', 'PS', '10.93.55.87', '72821', 'CP-3905', 'FCH17318D8E', 'Yes'),
+(268, 'DMK', 'Godda', 'Muffasil  ', 'PS', '10.93.55.20', '72822', 'CP-3905', 'FCH17309DH9', 'Yes'),
+(269, 'DMK', 'Godda', 'Sunder  Pahari  ', 'PS', '10.93.55.148', '72823', 'CP-3905', 'FCH17328BLH', 'Yes'),
+(270, 'DMK', 'Godda', 'Deodar', 'PS', '10.93.71.170', '72829', 'CP-3905', 'FCH17318DA4', 'Yes'),
+(271, 'DMK', 'Godda', 'Pathargama', 'PS', '', '72830', 'CP-3905', 'FCH17318DRM', 'Yes'),
+(272, 'DMK', 'Godda', 'Meharma', 'PS', '', '72831', 'CP-3905', '', 'Yes'),
+(273, 'DMK', 'Godda', 'Belbadda', 'PS', '10.93.71.211', '72832', 'CP-3905', 'FCH17298GVD', 'Yes'),
+(274, 'DMK', 'Godda', 'Thakur Gangti', 'PS', '10.93.71.220', '72833', 'CP-3905', 'FCH17309DMN', 'Yes'),
+(275, 'DMK', 'Godda', 'Hanwara', 'PS', '10.93.71.155', '72834', 'CP-3905', 'FCH17298GUH', 'Yes'),
+(276, 'DMK', 'Godda', 'Rajabhitha', 'PS', '10.93.55.68', '72835', 'CP-3905', '', 'Yes'),
+(277, 'DMK', 'Godda', 'Basantrai', 'PS', '10.93.55.51', '72836', 'CP-3905', 'FCH17309DGJ', 'Yes'),
+(278, 'DMK', 'Godda', 'Lalmatia', 'PS', '', '72837', 'CP-3905', '', 'NO'),
+(279, 'DMK', 'Godda', 'Boarijore', 'PS', '', '72838', 'CP-3905', '', 'Yes'),
+(280, 'DMK', 'Godda', 'Sadar ', 'CI', '10.93.55.99', '72827', 'CP-3905', 'FCH17318CF3', 'Yes'),
+(281, 'DMK', 'Godda', 'Dy SP HQ', 'HO', '10.93.55.3', '72824', 'CP-3905', 'FCH17318DRK', 'Yes'),
+(282, 'DMK', 'Godda', 'SP Residence', 'HO', '10.134.13.196', '72825', 'CP-3905', 'FCH17319R3M', 'Yes'),
+(283, 'DMK', 'Godda', 'SDPO', 'HO', '10.93.55.115', '72826', 'CP-3905', 'FCH17319SEJ', 'Yes'),
+(284, 'DMK', 'Sahibganj', 'Sahibganj Nagar P.S', 'PS', '10.93.60.86', '73021', 'CP-3905', 'FCH17318CH3', 'Yes'),
+(285, 'DMK', 'Sahibganj', 'Rail', 'PS', '10.93.60.6', '73022', 'CP-3905', 'FCH17319R5L', 'Yes'),
+(286, 'DMK', 'Sahibganj', 'Mirzachauki ', 'PS', '10.93.60.102', '73023', 'CP-3905', 'FCH17318CB3', 'Yes'),
+(287, 'DMK', 'Sahibganj', 'Taljhari', 'PS', '10.93.72.102', '73030', 'CP-3905', 'FCH17298EG6', 'Yes'),
+(288, 'DMK', 'Sahibganj', 'Muffasil', 'PS', '10.93.60.115', '73031', 'CP-3905', 'FCH17318C4M', 'Yes'),
+(289, 'DMK', 'Sahibganj', 'Borio', 'PS', '10.93.72.139', '73032', 'CP-3905', 'FCH17298H43', 'Yes'),
+(290, 'DMK', 'Sahibganj', 'Radhanagar', 'PS', '10.93.72.150', '73033', 'CP-3905', '', 'Yes'),
+(291, 'DMK', 'Sahibganj', 'Barhet', 'PS', '10.93.72.132', '73034', 'CP-3905', '', 'Yes'),
+(292, 'DMK', 'Sahibganj', 'Barharwa', 'PS', '10.93.72.124', '73035', 'CP-3905', '', 'Yes'),
+(293, 'DMK', 'Sahibganj', 'Kotalpokhar', 'PS', '10.93.72.157', '73036', 'CP-3905', '', 'Yes'),
+(294, 'DMK', 'Sahibganj', 'Ranga', 'PS', '', '73037', 'CP-3905', '', 'NO'),
+(295, 'DMK', 'Sahibganj', 'Badharwa Rail', 'PS', '10.93.66.28', '73038', 'CP-3905', '', 'Yes'),
+(296, 'DMK', 'Sahibganj', 'Rajmahal', 'CI', '10.93.60.131', '73029', 'CP-3905', 'FCH17319PAR', 'Yes'),
+(297, 'DMK', 'Sahibganj', 'SDPO Sahibganj', 'HO', '10.93.60.34', '73024', 'CP-3905', 'FCH17319R1A', 'Yes'),
+(298, 'DMK', 'Sahibganj', 'SDPO Rajmahal', 'HO', '', '73025', 'CP-3905', '', 'Yes'),
+(299, 'DMK', 'Sahibganj', 'JAP-9,Sahibganj', 'HO', '10.93.60.67', '73026', 'CP-3905', 'FCH17318DC0', 'Yes'),
+(300, 'DMK', 'Sahibganj', 'SP Residence', 'HO', '10.134.13.230', '73027', 'CP-3905', 'FCH17319QWR', 'Yes'),
+(301, 'DMK', 'Sahibganj', 'Police Line', 'HO', '', '73028', 'CP-3905', 'FCH17318CBJ', 'Yes'),
+(302, 'DMK', 'Pakur', 'Pakur Nagar P.S', 'PS', '10.93.61.69 ', '73221', 'CP-3905', 'FCH17318E1B', 'Yes'),
+(303, 'DMK', 'Pakur', 'Muffasil', 'PS', '10.93.61.35', '73226', 'CP-3905', 'FCH17319R68', 'Yes'),
+(304, 'DMK', 'Pakur', 'Hiranpur', 'PS', '10.93.72.53', '73227', 'CP-3905', 'FCH17318CNN', 'Yes'),
+(305, 'DMK', 'Pakur', 'Littipara', 'PS', '10.93.61.115', '73228', 'CP-3905', 'FCH17319QZ3', 'Yes'),
+(306, 'DMK', 'Pakur', 'Pakuria', 'PS', '', '73229', 'CP-3905', '', 'Yes'),
+(307, 'DMK', 'Pakur', 'Amrapara', 'PS', '', '73230', 'CP-3905', '', 'NO'),
+(308, 'DMK', 'Pakur', 'Maheshpur', 'PS', '', '73231', 'CP-3905', 'FCH17318CPP', 'Yes'),
+(309, 'DMK', 'Pakur', 'Pakur ', 'CI', '10.93.61.98', '73225', 'CP-3905', 'FCH17318C51', 'Yes'),
+(310, 'DMK', 'Pakur', 'DSP HQ', 'HO', '10.93.61.4', '73222', 'CP-3905', 'FCH17309DMC', 'Yes'),
+(311, 'DMK', 'Pakur', 'S.P Residence', 'HO', '10.134.13.251', '73223', 'CP-3905', 'FCH17309DGV', 'Yes'),
+(312, 'DMK', 'Pakur', 'SDPO', 'HO', '', '73224', 'CP-3905', '', 'Yes'),
+(313, 'DMK', 'Deoghar', 'Nagar P.S ', 'PS', '10.93.54.119', '72641', 'CP-3905', 'FCH17298G0X', 'Yes'),
+(314, 'DMK', 'Deoghar', 'Madhupur  ', 'PS', '10.93.54.170', '72642', 'CP-3905', 'FCH17298H3Z', 'Yes'),
+(315, 'DMK', 'Deoghar', 'Sarath PS', 'PS', '10.93.54.30', '72643', 'CP-3905', 'FCH17318CRR', 'Yes'),
+(316, 'DMK', 'Deoghar', 'Karoun', 'PS', '', '72647', 'CP-3905', 'FCH17319R6G', 'Yes'),
+(317, 'DMK', 'Deoghar', 'Kunda', 'PS', '10.93.71.83', '72648', 'CP-3905', 'FCH17318EB6', 'Yes'),
+(318, 'DMK', 'Deoghar', 'Jasidih', 'PS', '10.93.54.67', '72649', 'CP-3905', 'FCH17318DZC', 'Yes'),
+(319, 'DMK', 'Deoghar', 'Devipur', 'PS', '10.93.71.132', '72650', 'CP-3905', 'FCH17318EBR', 'Yes'),
+(320, 'DMK', 'Deoghar', 'Sonarai Thari', 'PS', ' 10.93.71.67', '72651', 'CP-3905', '', 'Yes'),
+(321, 'DMK', 'Deoghar', 'Mohanpur', 'PS', '10.93.54.87', '72652', 'CP-3905', 'FCH17318DW8', 'Yes'),
+(322, 'DMK', 'Deoghar', 'Palajori', 'PS', '10.93.71.107', '72653', 'CP-3905', 'FCH17309D0H', 'Yes'),
+(323, 'DMK', 'Deoghar', 'Chitra', 'PS', '', '72654', 'CP-3905', 'FCH17309DT4', 'Yes'),
+(324, 'DMK', 'Deoghar', 'Margomunda', 'PS', '', '72655', 'CP-3905', 'FCH17309DPV', 'Yes'),
+(325, 'DMK', 'Deoghar', 'S.P Residence', 'HO', ' 10.134.13.219', '72644', 'CP-3905', 'FCH17298END', 'Yes'),
+(326, 'DMK', 'Deoghar', 'SDPO Deoghar', 'HO', ' 10.93.54.131', '72645', 'CP-3905', '', 'Yes'),
+(327, 'DMK', 'Deoghar', 'JAP-5,Deoghar', 'HO', '10.93.54.150', '72646', 'CP-3905', 'FCH17319R2M', 'Yes'),
+(328, 'DMK', 'Jamtara', 'Jamtara Nagar P.S', 'PS', '172.16.54.4', '73621', 'CP-3905', 'FCH17319R5N', 'Yes'),
+(329, 'DMK', 'Jamtara', 'Narayanpur', 'PS', '10.93.57.83', '73625', 'CP-3905', '', 'Yes'),
+(330, 'DMK', 'Jamtara', 'Karmatand', 'PS', '10.93.72.211', '73626', 'CP-3905', 'FCH17319R7H', 'Yes'),
+(331, 'DMK', 'Jamtara', 'Mihijam', 'PS', '10.93.72.221', '73627', 'CP-3905', '', 'Yes'),
+(332, 'DMK', 'Jamtara', 'Bindapathar', 'PS', '10.93.72.243', '73628', 'CP-3905', '', 'Yes'),
+(333, 'DMK', 'Jamtara', 'Phatehpur', 'PS', '', '73629', 'CP-3905', '', 'No'),
+(334, 'DMK', 'Jamtara', 'SP Res', 'HO', '10.134.13.186', '73622', 'CP-3905', 'FCH17309E2X', 'Yes'),
+(335, 'DMK', 'Jamtara', 'Police Line', 'HO', '', '73624', 'CP-3905', '', 'No'),
+(336, 'DMK', 'Jamtara', 'SDPO', 'HO', '10.93.57.54', '73623', 'CP-3905', 'FCH17318CFW', 'Yes'),
+(337, 'JSR', 'Jamshedpur', 'Sakchi   ', 'PS', '10.93.41.38', '71651', 'CP-3905', 'PUC17190KMJ', 'Yes'),
+(338, 'JSR', 'Jamshedpur', 'Bistupur   ', 'PS', '10.93.42.54', '71652', 'CP-3905', 'FCH17318CL6', 'Yes'),
+(339, 'JSR', 'Jamshedpur', 'Telco   ', 'PS', '10.93.41.196', '71653', 'CP-3905', 'FCH17309E0J', 'Yes'),
+(340, 'JSR', 'Jamshedpur', 'Parsudih ', 'PS', '10.93.41.183', '71655', 'CP-3905', 'FCH17309DCF', 'Yes'),
+(341, 'JSR', 'Jamshedpur', 'Golmuri    ', 'PS', '10.93.42.37', '71656', 'CP-3905', 'FCH17328BBS', 'Yes'),
+(342, 'JSR', 'Jamshedpur', 'Mango   ', 'PS', '10.93.42.101', '71654', 'CP-3905', 'FCH17309DR7', 'Yes'),
+(343, 'JSR', 'Jamshedpur', 'Rail', 'PS', '10.93.42.133', '71657', 'CP-3905', 'FCH17318D8C', 'Yes'),
+(344, 'JSR', 'Jamshedpur', 'Govindpur   ', 'PS', '10.93.41.229', '71658', 'CP-3905', 'FCH17289GSY', 'Yes'),
+(345, 'JSR', 'Jamshedpur', 'Kadma   ', 'PS', '10.93.42.68', '71659', 'CP-3905', 'FCH17309DJT', 'Yes'),
+(346, 'JSR', 'Jamshedpur', 'Birsanagar   ', 'PS', '10.93.41.242', '71660', 'CP-3905', 'FCH17309DC7', 'Yes'),
+(347, 'JSR', 'Jamshedpur', 'Sidhgora    ', 'PS', '10.93.42.4', '71661', 'CP-3905', 'FCH17309DJX', 'Yes'),
+(348, 'JSR', 'Jamshedpur', 'Sonari   ', 'PS', '10.93.42.87', '71662', 'CP-3905', 'FCH17318EBD', 'Yes'),
+(349, 'JSR', 'Jamshedpur', 'Kamalpur', 'PS', '10.93.64.213', '71677', 'CP 3905', '', 'Yes'),
+(350, 'JSR', 'Jamshedpur', 'Ghatshila', 'PS', '', '71678', 'CP 3905', '', 'Yes'),
+(351, 'JSR', 'Jamshedpur', 'Shyam Sundarpur', 'PS', '10.93.64.188', '71679', 'CP 3905', 'FCH17309E2E', 'Yes'),
+(352, 'JSR', 'Jamshedpur', 'Kawali', 'PS', '10.93.64.198', '71680', 'CP 3905', 'FCH17318C9M', 'Yes'),
+(353, 'JSR', 'Jamshedpur', 'Gurabanda', 'PS', '', '71681', 'CP 3905', '', 'No'),
+(354, 'JSR', 'Jamshedpur', 'Bodam', 'PS', '10.93.64.46', '71682', 'CP 3905', 'FCH17318C9L', 'Yes'),
+(355, 'JSR', 'Jamshedpur', 'Azad Nagar', 'PS', '10.93.42.246', '71683', 'CP 3905', 'FCH17309D0N', 'Yes'),
+(356, 'JSR', 'Jamshedpur', 'Chandil Rail', 'PS', '', '71684', 'CP 3905', '', 'No'),
+(357, 'JSR', 'Jamshedpur', 'Telco   ', 'CI', '10.93.41.211', '71675', 'CP-3905', 'FCH17318CMZ', 'Yes'),
+(358, 'JSR', 'Jamshedpur', 'Sidhgora    ', 'CI', '10.93.2.48', '71676', 'CP-3905', 'FCH17318CHP', 'Yes'),
+(359, 'JSR', 'Jamshedpur', 'SP CITY', 'HO', '10.134.11.36', '71663', 'CP-3905', 'FCH17309D2L', 'Yes'),
+(360, 'JSR', 'Jamshedpur', 'SP Rural', 'HO', '10.134.11.36', '71664', 'CP-3905', 'FCH17318DQT', 'Yes'),
+(361, 'JSR', 'Jamshedpur', 'Dy SP HQ 2', 'HO', '10.134.11.44', '71665', 'CP-3905', 'FCH17318EED', 'Yes'),
+(362, 'JSR', 'Jamshedpur', 'Dy SP City', 'HO', '10.93.41.99', '71666', 'CP-3905', 'FCH17318E7T', 'Yes'),
+(363, 'JSR', 'Jamshedpur', 'Dy SP Law & Order', 'HO', '', '', 'CP-3905', '', 'No'),
+(364, 'JSR', 'Jamshedpur', 'Jap-6, Jamshedpur', 'HO', '', '71668', 'CP-3905', '', 'Yes'),
+(365, 'JSR', 'Jamshedpur', 'Dy. SP Mussabani', 'HO', '10.93.42.196', '71669', 'CP-3905', 'FCH17309D5X', 'Yes'),
+(366, 'JSR', 'Jamshedpur', 'Traffic Taining School', 'HO', '', '71670', 'CP-3905', '', 'Yes'),
+(367, 'JSR', 'Jamshedpur', 'S.P Rail, JSR', 'HO', '10.93.42.246', '71671', 'CP-3905', 'FCH17309D0N', 'Yes'),
+(368, 'JSR', 'Jamshedpur', 'S.P Residence', 'HO', '10.134.13.118', '71672', 'CP-3905', 'FCH17319S2B', 'Yes'),
+(369, 'JSR', 'Jamshedpur', 'Dy. SP Patamda', 'HO', '', '71674', 'CP-3905', '', 'Yes'),
+(370, 'JSR', 'Chaibasa', 'Sadar P.S', 'PS', '10.93.44.22', '74221', 'CP-3905', 'FCH17328BAX', 'Yes'),
+(371, 'JSR', 'Chaibasa', 'Muffasil  ', 'PS', '10.93.44.91', '74222', 'CP-3905', 'FCH17298H58', 'Yes'),
+(372, 'JSR', 'Chaibasa', 'Chakradharpur', 'PS', '10.93.44.120', '74223', 'CP-3905', 'FCH17289LRK', 'Yes'),
+(373, 'JSR', 'Chaibasa', 'CKP Rail', 'PS', '10.93.44.51', '74228', 'CP-3905', 'FCH17298EDR', 'Yes'),
+(374, 'JSR', 'Chaibasa', 'Manjhari', 'PS', '10.93.65.132', '74229', 'CP-3905', 'FCH17319R64', 'Yes'),
+(375, 'JSR', 'Chaibasa', 'Kumardungi', 'PS', '10.93.65.203', '74230', 'CP-3905', 'FCH17309E80', 'Yes'),
+(376, 'JSR', 'Chaibasa', 'Manjhagaon', 'PS', '10.93.65.196', '74231', 'CP-3905', 'FCH17319R6E', 'Yes'),
+(377, 'JSR', 'Chaibasa', 'Tonto', 'PS', '10.93.66.12', '74232', 'CP-3905', 'FCH17319RV4', 'Yes'),
+(378, 'JSR', 'Chaibasa', 'Jhikpani', 'PS', '10.93.44.99', '74233', 'CP-3905', 'FCH17318E5Z', 'Yes'),
+(379, 'JSR', 'Chaibasa', 'Jatea', 'PS', '10.93.65.219', '74234', 'CP-3905', 'FCH17319R2R', 'Yes'),
+(380, 'JSR', 'Chaibasa', 'Jagannathpur', 'PS', '   10.93.65.211', '74235', 'CP-3905', 'FCH17318BXP', 'Yes'),
+(381, 'JSR', 'Chaibasa', 'Nowamundi', 'PS', '10.93.65.139', '74236', 'CP-3905', '', 'Yes'),
+(382, 'JSR', 'Chaibasa', 'Goilkera', 'PS', '', '74237', 'CP-3905', '', 'No'),
+(383, 'JSR', 'Chaibasa', 'Toklo', 'PS', '', '74238', 'CP-3905', '', 'No'),
+(384, 'JSR', 'Chaibasa', 'Chotanagara', 'PS', '', '74239', 'CP-3905', '', 'No'),
+(385, 'JSR', 'Chaibasa', 'Jaraikela', 'PS', '', '74240', 'CP-3905', '', 'No'),
+(386, 'JSR', 'Chaibasa', 'Tebo', 'PS', '', '74241', 'CP-3905', '', 'No'),
+(387, 'JSR', 'Chaibasa', 'Bandgaon', 'PS', '', '74242', 'CP-3905', '', 'No'),
+(388, 'JSR', 'Chaibasa', 'Anandpur    ', 'PS', '10.93.65.227', '74243', 'CP-3905', 'FCH17318C2C', 'Yes'),
+(389, 'JSR', 'Chaibasa', 'Policeline', 'HO', '10.93.44.212', '74224', 'CP-3905', 'FCH17318BTR', 'Yes'),
+(390, 'JSR', 'Chaibasa', 'SP Residence', 'HO', '10.134.13.148', '74225', 'CP-3905', 'FCH17318DBD', 'Yes'),
+(391, 'JSR', 'Chaibasa', 'Dy SP HQ 1', 'HO', '10.134.11.68', '74226', 'CP-3905', 'FCH17309DM5', 'Yes'),
+(392, 'JSR', 'Chaibasa', 'D.I.G Chaibasa', 'HO', '10.93.44.40', '74227', 'CP-3905', 'FCH17319NYJ', 'Yes'),
+(393, 'JSR', 'Saraikela', 'Saraikela Nagar P.S', 'PS', '10.93.53.72', '71421', 'CP-3905', 'FCH17309DE2', 'YES'),
+(394, 'JSR', 'Saraikela', 'RIT, Jamshedpur', 'PS', '10.93.53.52', '71422', 'CP-3905', 'FCH17309DDS', 'YES'),
+(395, 'JSR', 'Saraikela', 'Kandra', 'PS', '10.93.53.12', '71426', 'CP-3905', 'FCH17309CXM', 'YES'),
+(396, 'JSR', 'Saraikela', 'Tiruldih', 'PS', '10.93.65.60', '71427', 'CP-3905', '', 'YES'),
+(397, 'JSR', 'Saraikela', 'Ichagarh', 'PS', '10.93.65.36', '71428', 'CP-3905', 'FCH17309D2S', 'YES'),
+(398, 'JSR', 'Saraikela', 'Gamharia', 'PS', '10.93.53.19', '71429', 'CP-3905', 'FCH17318EDN', 'YES'),
+(399, 'JSR', 'Saraikela', 'Rajnagar', 'PS', '10.93.65.68', '71430', 'CP-3905', 'FCH2222DZ4A', 'YES'),
+(400, 'JSR', 'Saraikela', 'Chouka', 'PS', '10.93.65.20', '71431', 'CP-3905', '', 'YES'),
+(401, 'JSR', 'Saraikela', 'SP RES', 'HO', '10.134.13.130', '71423', 'CP-3905', 'FCH17319SWS', 'YES'),
+(402, 'JSR', 'Saraikela', 'SDPO', 'HO', '10.93.53.115', '71424', 'CP-3905', 'FCH17309DHX', 'YES'),
+(403, 'Daltonganj', 'Palamu', 'Nagar PS', 'PS', '10.93.43.35', '71821', 'CP-3905', 'FCH17319SNW', 'Yes'),
+(404, 'Daltonganj', 'Palamu', 'Rail', 'PS', '10.93.35.133', '71822', 'CP-3905', 'FCH17319R5G', 'Yes'),
+(405, 'Daltonganj', 'Palamu', 'Nawajaipur ', 'PS', '10.93.69.171', '71827', 'CP-3905', 'FCH17298H3P', 'Yes'),
+(406, 'Daltonganj', 'Palamu', 'Palamu Sadar P.S.', 'PS', '10.93.43.180', '71828', 'CP-3905', 'FCH17318CP9', 'Yes'),
+(407, 'Daltonganj', 'Palamu', 'Manatu', 'PS', '10.93.69.179', '71829', 'CP-3905', '', 'Yes'),
+(408, 'Daltonganj', 'Palamu', 'Tarhasi', 'PS', '10.93.70.35', '71830', 'CP-3905', 'FCH17319S9D', 'Yes'),
+(409, 'Daltonganj', 'Palamu', 'Pandu', 'PS', '10.93.70.19', '71831', 'CP-3905', 'FCH17318DGC', 'Yes'),
+(410, 'Daltonganj', 'Palamu', 'Untari Road', 'PS', '10.93.69.243', '71832', 'CP-3905', '', 'Yes'),
+(411, 'Daltonganj', 'Palamu', 'Ramgarh', 'PS', '', '71833', 'CP-3905', '', 'No'),
+(412, 'Daltonganj', 'Palamu', 'Pipratand', 'PS', '', '71834', 'CP-3905', '', 'No'),
+(413, 'Daltonganj', 'Palamu', 'Nawadiha Bazar', 'PS', '', '71835', 'CP-3905', '', 'No'),
+(414, 'Daltonganj', 'Palamu', 'Pipara', 'PS', '', '71836', 'CP-3905', '', 'No'),
+(415, 'Daltonganj', 'Palamu', 'Nawabazar', 'PS', '', '71837', 'CP-3905', '', 'No'),
+(416, 'Daltonganj', 'Palamu', 'Town', 'CI', '10.93.43.195', '71825', 'CP-3905', 'FCH17318C53', 'Yes'),
+(417, 'Daltonganj', 'Palamu', 'Sadar', 'CI', '10.93.43.212', '71826', 'CP-3905', 'FCH17309CZS', 'Yes'),
+(418, 'Daltonganj', 'Palamu', 'JAP-8,Palamu', 'HO', '10.93.43.134', '71823', 'CP-3905', 'FCH17319QYG', 'Yes'),
+(419, 'Daltonganj', 'Palamu', 'Policeline', 'HO', '10.93.43.243', '71824', 'CP-3905', 'FCH17319PG3', 'Yes'),
+(420, 'Daltonganj', 'Palamu', 'SP Residence', 'HO', '10.134.13.5', '71803', 'CP-3905', 'FCH17319R58', 'Yes'),
+(421, 'Daltonganj', 'Palamu', 'Dy SP HQ 1', 'HO', '10.93.43.84', '71804', 'CP-3905', '', 'Yes'),
+(422, 'Daltonganj', 'Palamu', 'Dy SP HQ 2', 'HO', '', '71805', 'CP-3905', '', 'Yes'),
+(423, 'Daltonganj', 'Palamu', 'D.I.G', 'HO', '', '71806', 'CP-3905', 'FCH17319R18', 'Yes'),
+(424, 'Daltonganj', 'Garhwa', 'Nagar PS', 'PS', '10.93.52.30', '70621', 'CP-3905', 'FCH17319R7A', 'Yes'),
+(425, 'Daltonganj', 'Garhwa', 'Meral', 'PS', '10.93.52.94', '70622', 'CP-3905', 'FCH17318CY0', 'Yes'),
+(426, 'Daltonganj', 'Garhwa', 'Nagar  Untari', 'PS', '10.93.52.125', '70623', 'CP-3905', 'FCH17318CHJ', 'Yes'),
+(427, 'Daltonganj', 'Garhwa', 'Ranka ', 'PS', '10.93.52.38', '70624', 'CP-3905', 'FCH17298GV9', 'Yes'),
+(428, 'Daltonganj', 'Garhwa', 'Bhandaria', 'PS', '10.93.7075', '70625', 'CP-3905', '', 'Yes'),
+(429, 'Daltonganj', 'Garhwa', 'Ramna', 'PS', '10.93.52.99', '70627', 'CP 3905', 'FCH17298ERG', 'Yes'),
+(430, 'Daltonganj', 'Garhwa', 'Bhawnathpur', 'PS', '10.93.52.150', '70628', 'CP 3905', 'FCH17308ZNV', 'Yes'),
+(431, 'Daltonganj', 'Garhwa', 'Manjhiaon', 'PS', '10.93.52.181', '70629', 'CP 3905', 'FCH17309EGD', 'Yes'),
+(432, 'Daltonganj', 'Garhwa', 'Dhurki', 'PS', '10.93.70.100', '70630', 'CP 3905', 'FCH17298EQY', 'Yes'),
+(433, 'Daltonganj', 'Garhwa', 'Bishunpura', 'PS', '10.93.70.52', '70631', 'CP 3905', 'FCH17318EF9', 'Yes'),
+(434, 'Daltonganj', 'Garhwa', 'Chinia', 'PS', '', '70632', 'CP 3905', '', 'NO'),
+(435, 'Daltonganj', 'Garhwa', 'Dandai', 'PS', '', '70633', 'CP 3905', '', 'NO'),
+(436, 'Daltonganj', 'Garhwa', 'Kharaundhi', 'PS', '', '70634', 'CP 3905', '', 'NO'),
+(437, 'Daltonganj', 'Garhwa', 'Kandi', 'PS', '', '70635', 'CP 3905', '', 'NO'),
+(438, 'Daltonganj', 'Garhwa', 'Ramkanda', 'PS', '', '70636', 'CP 3905', '', 'NO'),
+(439, 'Daltonganj', 'Garhwa', 'Danda', 'PS', '', '70637', 'CP 3905', '', 'NO'),
+(440, 'Daltonganj', 'Garhwa', 'Ketar', 'PS', '', '70638', 'CP 3905', '', 'NO'),
+(441, 'Daltonganj', 'Garhwa', 'Bardiha', 'PS', '', '70639', 'CP 3905', '', 'NO'),
+(442, 'Daltonganj', 'Garhwa', 'Garhwa', 'CI', '10.93.52.29', '70626', 'CP 3905', 'FCH17318DYJ', 'Yes'),
+(443, 'Daltonganj', 'Garhwa', 'SP Residence', 'HO', '10.134.13.25', '70605', 'CP-3905', 'FCH17328AY1', 'Yes'),
+(444, 'Daltonganj', 'Garhwa', 'SDPO', 'HO', '10.93.52.200', '70606', 'CP-3905', 'FCH17318ECU', 'Yes'),
+(445, 'Daltonganj', 'Garhwa', 'DSP', 'HO', '10.134.11.197', '70607', 'CP-3905', '', 'Yes'),
+(446, 'Daltonganj', 'Latehar', 'Nagar PS', 'PS', '172.16.80.4', '73821', 'CP-3905', 'FCH17318BU5', 'Yes'),
+(447, 'Daltonganj', 'Latehar', 'Chandwa', 'PS', '172.16.80.132', '73822', 'CP-3905', 'FCH17289NEB', 'Yes'),
+(448, 'Daltonganj', 'Latehar', 'Manika', 'PS', '172.16.80.116', '73823', 'CP-3905', 'FCH17318BXQ', 'Yes'),
+(449, 'Daltonganj', 'Latehar', 'Balumath', 'PS', '10.93.70.157', '73816', 'CP-3905', 'FCH17318C52', 'Yes'),
+(450, 'Daltonganj', 'Latehar', 'Barwadih', 'PS', '10.93.47.133', '73817', 'CP-3905', '', 'Yes'),
+(451, 'Daltonganj', 'Latehar', 'Chhippadohar', 'PS', '10.93.70.171', '73818', 'CP-3905', 'FCH17318CML', 'Yes'),
+(452, 'Daltonganj', 'Latehar', 'Mahuwatand', 'PS', '10.93.70.149', '73819', 'CP-3905', 'FCH17309EG8', 'YES'),
+(453, 'Daltonganj', 'Latehar', 'Netarhat', 'PS', '', '73820', 'CP-3905', '', 'No'),
+(454, 'Daltonganj', 'Latehar', 'Harhanj', 'PS', '', '73821', 'CP-3905', '', 'No'),
+(455, 'Daltonganj', 'Latehar', 'Baresarh ', 'PS', '', '73822', 'CP-3905', '', 'No'),
+(456, 'Daltonganj', 'Latehar', 'SDPO Latehar', 'HO', '172.16.80.245', '73803', 'CP-3905', '', 'Yes'),
+(457, 'Daltonganj', 'Latehar', 'SP Residence', 'HO', '10.134.13.44', '73804', 'CP-3905', 'FCH17319QG8', 'Yes'),
+(458, 'Daltonganj', 'Latehar', 'DSP HQ', 'HO', '', '73805', 'CP-3905', '', 'Yes'),
+(459, 'test', 'sadf', 'afsd', 'fasdf', 'fdasf', 'fdasf', 'fasdf', 'afsd', 'fasd');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dashboard`
+--
+
+CREATE TABLE `dashboard` (
+  `id` int(11) NOT NULL,
+  `location` varchar(50) DEFAULT NULL,
+  `model_3905` int(11) DEFAULT NULL,
+  `model_6941` int(11) DEFAULT NULL,
+  `model_7821` int(11) DEFAULT NULL,
+  `pending` int(11) DEFAULT NULL,
+  `total_installed` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dashboard`
+--
+
+INSERT INTO `dashboard` (`id`, `location`, `model_3905`, `model_6941`, `model_7821`, `pending`, `total_installed`) VALUES
+(1, 'PHQ', 32, 20, 3, NULL, 55),
+(2, 'DHQ', NULL, 24, NULL, NULL, 24),
+(3, 'HelpDesk', NULL, NULL, NULL, 2, 2),
+(4, 'NOC ROOM', NULL, NULL, NULL, 24, 24),
+(5, 'STATE DIAL 100', 20, 2, NULL, NULL, 22),
+(6, 'DIAL 100', NULL, 24, 124, NULL, 148),
+(7, 'PS', 285, NULL, 47, 238, NULL),
+(8, 'HO', 149, NULL, 15, 134, NULL),
+(9, 'CI', 25, NULL, NULL, NULL, 25),
+(10, 'TOTAL', 537, 70, 127, 62, 672),
+(11, 'STOCK IN STORE', 163, 31, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `directory`
+--
+
+CREATE TABLE `directory` (
+  `id` int(11) NOT NULL,
+  `Location` varchar(255) DEFAULT NULL,
+  `Assigned_To` varchar(255) DEFAULT NULL,
+  `IP_Phone_No` varchar(255) DEFAULT NULL,
+  `IP_Address` varchar(255) DEFAULT NULL,
+  `Model_No` varchar(255) DEFAULT NULL,
+  `Serial_Number` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `directory`
+--
+
+INSERT INTO `directory` (`id`, `Location`, `Assigned_To`, `IP_Phone_No`, `IP_Address`, `Model_No`, `Serial_Number`) VALUES
+(2, 'PHQ', 'ADG-OPERATION', '70001', '172.16.17.3', 'CP-6941', 'PUC17190KQQ'),
+(3, 'PHQ', 'ADG-HQ', '70002', '172.16.17.5', 'CP-6941', 'PUC17190KL3'),
+(4, 'PHQ', 'DG-Training', '70003', '172.16.17.6', 'CP-6941', 'PUC17190KL3'),
+(5, 'PHQ', 'IG-PROVISION', '70004', '10.134.10.251', 'CP-6941', 'PUC17190KMX'),
+(6, 'PHQ', 'IG-HQ', '70005', '172.16.17.12', 'CP-3905', 'FCH17309CXD'),
+(7, 'PHQ', 'IG-HR', '70006', '172.16.17.7', 'CP-3905', 'FCH17309DYP'),
+(8, 'PHQ', 'IG-TRAINING', '70007', '172.16.17.9', 'CP-3905', 'FCH17309E5B'),
+(9, 'PHQ', 'DIG-BUDGET', '70008', '172.16.17.10', 'CP-3905', 'FCH17309EGG'),
+(10, 'PHQ', 'DIG-Karmik', '70009', '172.16.17.11', 'CP-3905', 'PUC17190KVR'),
+(11, 'PHQ', 'IG-OPS', '70010', '172.16.17.8', 'CP-3905', 'FCH17328BL8'),
+(12, 'CID', 'ADG-CID', '70011', '10.134.12.93', 'CP-6941', 'PUC17190KO3'),
+(13, 'CID', 'IG-CID', '70012', '10.134.12.94', 'CP-6941', 'PUC17190KPF'),
+(14, 'CID', 'DIG-CID', '70013', '10.134.12.91', 'CP-3905', 'FCH17318CHV'),
+(15, 'CID', 'CONTROL-ROOM-CID', '70014', '172.16.64.85', 'CP-3905', 'FCH17308ZQB'),
+(16, 'CID', 'CONTROL-ROOM-CID', '70015', '172.16.64.88', 'CP-3905', 'FCH17309E4K'),
+(17, 'CID', 'DG Rail', '70035', '10.134.12.92', 'CP-6941', ''),
+(18, 'Special Branch', 'ADG-SB', '70016', '172.16.17.13', 'CP-6941', 'PUC17190KNK'),
+(19, 'Special Branch', 'IG-SB', '70017', '172.16.17.14', 'CP-3905', 'FCH17318CD9'),
+(20, 'Special Branch', 'DIG-SB', '70018', '172.16.17.15', 'CP-6941', 'PUC17190KNX'),
+(21, 'Special Branch', 'SP-N1', '70019', '172.16.17.16', 'CP-3905', 'FCH17319R6P'),
+(22, 'Special Branch', 'SP-N2', '70020', '172.16.17.17', 'CP-3905', 'FCH17318CC7'),
+(23, 'Special Branch', 'SP-SECURITY', '70021', '172.16.17.18', 'CP-3905', ''),
+(24, 'Special Branch', 'TECHNICAL CELL', '70022', '172.16.17.19', 'CP-3905', 'FCH17319R27'),
+(25, 'Special Branch', 'WAR ROOM', '71300', '172.16.17.30', 'CP-6941', 'PUC17190KLO'),
+(26, 'District Office', 'SSP JAMSHEDPUR', '70040', '10.134.11.42', 'CP-6941', 'PUC17190KLD'),
+(27, 'District Office', 'SP CHAIBASA', '70041', '10.134.11.70', 'CP-6941', ''),
+(28, 'District Office', 'SP SARAIKELA', '70042', '10.134.11.212', 'CP-6941', 'PUC17190KMV'),
+(29, 'District Office', 'SP DHANBAD', '70043', '10.134.11.7', 'CP-6941', 'PUC17190KLH'),
+(30, 'District Office', 'SP BOKARO', '70044', '10.134.11.104', 'CP-6941', 'PUC17190KN9'),
+(31, 'District Office', 'SP HAZARIBAGH', '70045', '10.134.11.27', 'CP-6941', 'PUC17190KPE'),
+(32, 'District Office', 'SP CHATRA', '70046', '10.134.11.188', 'CP-6941', 'PUC17190KLK'),
+(33, 'District Office', 'SP GIRIDIH', '70047', '10.134.12.67', 'CP-6941', 'PUC17190KME'),
+(34, 'District Office', 'SP RAMGARH', '70048', '10.134.12.150', 'CP-6941', 'PUC17190KLG'),
+(35, 'District Office', 'SP KODERMA', '70049', '10.134.12.52', 'CP-6941', 'PUC17190DKS'),
+(36, 'District Office', 'SP DUMKA', '70050', '10.134.11.86', 'CP-6941', 'PUC17190JVF'),
+(37, 'District Office', 'SP GODDA', '70051', '10.134.11.252', 'CP-6941', 'PUC17190KL0'),
+(38, 'District Office', 'SP PAKUR', '70052', '10.134.12.38', 'CP-6941', 'PUC17190KJX'),
+(39, 'District Office', 'SP SAHIBGANJ', '70053', '10.134.12.3', 'CP-6941', 'PUC17190KN6'),
+(40, 'District Office', 'SP JAMTARA', '70054', '10.134.12.25', 'CP-6941', 'PUC17190KNC'),
+(41, 'District Office', 'SP DEOGHAR', '70055', '10.134.11.235', 'CP-6941', 'PUC17190KNU'),
+(42, 'District Office', 'SP PALAMU', '70056', '10.134.11.52', 'CP-6941', 'PUC17190KTA'),
+(43, 'District Office', 'SP GARHWA', '70057', '10.134.11.197', 'CP-6941', 'PUC17190KM0'),
+(44, 'District Office', 'SP LATEHAR', '70058', '10.134.11.120', 'CP-6941', 'PUC17190KMW'),
+(45, 'District Office', 'SSP RANCHI', '70059', '10.134.12.124', 'CP-6941', ''),
+(46, 'District Office', 'SP KHUNTI', '70060', '10.134.12.105', 'CP-6941', 'PUC17190KM7'),
+(47, 'District Office', 'SP LOHARDAGA', '70061', '10.134.11.134', 'CP-6941', 'PUC17190KP5'),
+(48, 'District Office', 'SP SIMDEGA', '70062', '10.134.11.172', 'CP-6941', 'PUC17190KMI'),
+(49, 'District Office', 'SP GUMLA', '70063', '', 'CP-6941', ''),
+(50, 'Data Center', 'Vikesh Kr Sinha', '71200', '172.16.17.20', 'CP-6941', 'PUC17190KO2'),
+(51, 'Data Center', 'Sandeep Agrawal', '71201', '172.16.17.21', 'CP-6941', 'PUC17190WVJ'),
+(52, 'Data Center', 'Prem Ranjan', '71202', '172.16.17.22', 'CP-3905', 'FCH17309DNP'),
+(53, 'Data Center', 'ASP Wireless', '71203', '172.16.17.46', 'CP-6941', ''),
+(54, 'Data Center', 'PHQ-Support', '71204', '172.16.17.23', 'CP-3905', 'FCH17309D12'),
+(55, 'Data Center', 'SPMU', '71205', '172.16.17.24', 'CP-3905', 'FCH17309D6F'),
+(56, 'Data Center', 'CAS-1', '71206', '', '', ''),
+(57, 'Data Center', 'Data Center Training Room(DCTC)', '71207', '172.16.17.43', 'CP-3905', '7C95F323B682'),
+(58, 'Data Center', 'HELPDESK', '71208', '172.16.17.45', 'CP-3905', 'FCH17319Q0N'),
+(59, 'Data Center', 'DHQ-Ranchi', '71209', '192.168.89.29', '', ''),
+(60, 'Data Center', 'CAS-1', '71210', '172.16.17.27', 'CP-3905', 'FCH17308ZSK'),
+(61, 'Data Center', 'CAS-2', '71211', '172.16.17.28', 'CP-3905', 'FCH2126DPRH'),
+(62, 'Data Center', 'Vikram HQ', '71212', '172.16.17.35', 'CP-7821', 'PUC17190KNM'),
+(63, 'Data Center', 'Dhiraj HQ', '71213', '172.16.17.29', 'CP-3905', 'FCH17318E43'),
+(64, 'Data Center', 'Dhanesh-System Team', '71215', '172.16.17.39', 'CP-3905', 'FCH17319R6A'),
+(65, 'Data Center', 'Development-Section', '71217', '', '', ''),
+(66, 'Data Center', 'Ravi/Abnish', '71218', '172.16.17.38', '', ''),
+(67, 'Data Center', 'CAS-3', '70133', '10.93.253.254', 'CP-3905', 'FCH17318DW3'),
+(68, 'Data Center', 'HELPDESK', '77778', '172.16.17.44', '', ''),
+(69, 'DG HomeGuard', 'ADG HOMEGUARD', '70033', '172.16.64.86', 'CP-6941', ''),
+(70, 'DG HomeGuard', 'DIG HomeGuard', '70034', '172.16.64.85', 'CP-6941', ''),
+(71, 'DG HomeGuard', 'CO Homegaurd', '70037', '172.16.64.88', 'CP-3905', ''),
+(72, 'DG HomeGuard', 'FireStation Doranda', '70038', '172.16.64.90', 'CP-3905', ''),
+(73, 'DG HomeGuard', 'SFO Fire', '70039', '172.16.64.89', 'CP-3905', ''),
+(75, 'PHQ', 'DGP', '70000', '10.134.10.166', 'CP-6941', 'PUC17190KNM');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ip_phones`
+--
+
+CREATE TABLE `ip_phones` (
+  `id` int(11) NOT NULL,
+  `SSA` varchar(50) DEFAULT NULL,
+  `District` varchar(50) DEFAULT NULL,
+  `User` varchar(50) DEFAULT NULL,
+  `Location` varchar(50) DEFAULT NULL,
+  `IPAddress` varchar(15) DEFAULT NULL,
+  `DirNumber` varchar(10) DEFAULT NULL,
+  `Model` varchar(20) DEFAULT NULL,
+  `SerialNo` varchar(20) DEFAULT NULL,
+  `InstallationStatus` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ip_phones`
+--
+
+INSERT INTO `ip_phones` (`id`, `SSA`, `District`, `User`, `Location`, `IPAddress`, `DirNumber`, `Model`, `SerialNo`, `InstallationStatus`) VALUES
+(2, 'RCH', 'Ranchi', 'Agent2', 'Dial100', '10.134.16.209', '71242', 'CP7821', 'WZP20330Q5X', 'Yes'),
+(3, 'RCH', 'Ranchi', 'Agent 3', 'Dial100', '10.134.16.210', '71243', 'CP7821', 'WZP20330Q23', 'Yes'),
+(4, 'RCH', 'Ranchi', 'Agent 4', 'Dial100', '10.134.16.211', '71244', 'CP7821', 'WZP20330Q5D', 'Yes'),
+(5, 'RCH', 'Ranchi', 'Agent 5', 'Dial100', '10.134.16.212', '71245', 'CP7821', 'WZP20330Q4S', 'Yes'),
+(6, 'RCH', 'Ranchi', 'Agent 6', 'Dial100', '10.134.16.213', '71246', 'CP7821', 'WPZ20330Q5V', 'Yes'),
+(7, 'RCH', 'Ranchi', 'Agent 7', 'Dial100', '10.134.16.214', '71247', 'CP7821', 'WPZ20330Q9H', 'Yes'),
+(8, 'RCH', 'Ranchi', 'Agent 8', 'Dial100', '10.134.16.215', '71248', 'CP7821', 'WPZ20330Q7J', 'Yes'),
+(9, 'RCH', 'Lohardaga', 'Agent 1', 'Dial100', '10.134.17.153', '74011', 'CP7821K9', 'WZP20330YRL', ''),
+(10, 'RCH', 'Lohardaga', 'Agent 2', 'Dial100', '10.134.17.154', '74012', 'CP7821K9', 'WZP20330YS2', ''),
+(11, 'RCH', 'Lohardaga', 'Agent 3', 'Dial100', '10.134.17.155', '74013', 'CP7821K9', 'WZP20330YTS', ''),
+(12, 'RCH', 'Lohardaga', 'Agent 4', 'Dial100', '10.134.17.156', '74014', 'CP7821K9', 'WZP20330YTO', ''),
+(13, 'RCH', 'Simdega', 'Agent 1', 'Dial100', '10.134.17.217', '73411', 'CP7821K9', 'WZP2033OYM0', 'PHI20350EH9'),
+(14, 'RCH', 'Simdega', 'Agent 2', 'Dial100', '10.134.17.218', '73412', 'CP7821K9', 'WZP2033OYPX', 'PHI20350EGR'),
+(15, 'RCH', 'Simdega', 'Agent 3', 'Dial100', '10.134.17.219', '73413', 'CP7821K9', 'WZP2033OYMR', 'PHI20350EGV'),
+(16, 'RCH', 'Simdega', 'Agent 4', 'Dial100', '10.134.17.220', '73414', 'CP7821K9', 'WZP2033OYOJ', 'PHI20350EH7'),
+(17, 'RCH', 'Gumla', 'Agent 1', 'Dial100', '10.134.17.70', '72411', 'CP7821K9', 'WZP20330YNF', 'Yes'),
+(18, 'RCH', 'Gumla', 'Agent 2', 'Dial100', '10.134.17.72', '72413', 'CP7821K9', 'WZP20330YQB', 'Yes'),
+(19, 'RCH', 'Gumla', 'Agent 3', 'Dial100', '10.134.17.73', '72414', 'CP7821K9', 'WZP20330Y0D', 'Yes'),
+(20, 'RCH', 'Gumla', 'Agent 4', 'Dial100', '10.134.17.71', '72412', 'CP7821K9', 'WZP20330YRZ', 'Yes'),
+(21, 'RCH', 'Khunti', 'Agent 1', 'Dial100', '10.134.17.121', '71011', 'CP7821K9', 'WZP20330YN2', 'PHI20350EH5'),
+(22, 'RCH', 'Khunti', 'Agent 2', 'Dial100', '10.134.17.122', '71012', 'CP7821K9', 'WZP20330YNB', 'PHI20350EGK'),
+(23, 'RCH', 'Khunti', 'Agent 3', 'Dial100', '10.134.17.123', '71013', 'CP7821K9', 'WZP20330YMY', 'PHI20350EH1'),
+(24, 'RCH', 'Khunti', 'Agent 4', 'Dial100', '10.134.17.124', '71014', 'CP7821K9', 'WZP20330YO1', 'PHI20350EGJ'),
+(25, 'HZB', 'Hazaribagh', 'Agent 1', 'Dial100', '10.134.16.100', '74411', 'CP-7821-K9', 'WZP20330YSK', 'Yes'),
+(26, 'HZB', 'Hazaribagh', 'Agent2', 'Dial100', '10.134.16.101', '74412', 'CP-7821-K9', 'WZP20330YNL', 'Yes'),
+(27, 'HZB', 'Hazaribagh', 'Agent 3', 'Dial100', '10.134.16.102', '74413', 'CP-7821-K9', 'WZP20330YOR', 'Yes'),
+(28, 'HZB', 'Hazaribagh', 'Agent 4', 'Dial100', '10.134.16.103', '74414', 'CP-7821-K9', 'WZP20330YND', 'Yes'),
+(29, 'HZB', 'Hazaribagh', 'Agent 5', 'Dial100', '10.134.16.104', '74415', 'CP-7821-K9', 'WZP20330YQ5', 'Yes'),
+(30, 'HZB', 'Hazaribagh', 'Agent 6', 'Dial100', '10.134.16.105', '74416', 'CP-7821-K9', 'WZP20330YQA', 'Yes'),
+(31, 'HZB', 'Hazaribagh', 'Agent 7', 'Dial100', '10.134.16.106', '74417', 'CP-7821-K9', 'WZP20330YNC', 'Yes'),
+(32, 'HZB', 'Hazaribagh', 'Agent 8', 'Dial100', '10.134.16.107', '74418', 'CP-7821-K9', 'WZP20330YMI', 'Yes'),
+(33, 'HZB', 'Giridih', 'Agent 1', 'Dial100', '10.134.16.230', '74811', 'CP-7821-K9', 'WZP20330YPO', 'Yes'),
+(34, 'HZB', 'Giridih', 'Agent2', 'Dial100', '10.134.16.231', '74812', 'CP-7821-K9', 'WZP20330YQD', 'Yes'),
+(35, 'HZB', 'Giridih', 'Agent 3', 'Dial100', '10.134.16.232', '74813', 'CP-7821-K9', 'WZP20330YRY', 'Yes'),
+(36, 'HZB', 'Giridih', 'Agent 4', 'Dial100', '10.134.16.233', '74814', 'CP-7821-K9', 'WZP20330YSB', 'Yes'),
+(37, 'HZB', 'Koderma', 'Agent 1', 'Dial100', '10.134.17.99', '74611', 'CP-7821-K9', 'WZP2033105K', 'Yes'),
+(38, 'HZB', 'Koderma', 'Agent2', 'Dial100', '10.134.17.100', '74612', 'CP-7821-K9', 'WZP20330YJM', 'Yes'),
+(39, 'HZB', 'Koderma', 'Agent 3', 'Dial100', '10.134.17.101', '74613', 'CP-7821-K9', 'WZP2033OYM1', 'Yes'),
+(40, 'HZB', 'Koderma', 'Agent 4', 'Dial100', '10.134.17.102', '74614', 'CP-7821-K9', 'WZP2033OYNZ', 'Yes'),
+(41, 'HZB', 'Ramgarh', 'Agent 1', 'Dial100', '10.134.17.163', '72011', 'CP-7821-K9', 'WZP20330YPH', 'Yes'),
+(42, 'HZB', 'Ramgarh', 'Agent2', 'Dial100', '10.134.17.166', '72012', 'CP-7821-K9', 'WZP20330YRT', 'Yes'),
+(43, 'HZB', 'Ramgarh', 'Agent 3', 'Dial100', '10.134.17.164', '72013', 'CP-7821-K9', 'WZP20330VNI', 'Yes'),
+(44, 'HZB', 'Ramgarh', 'Agent 4', 'Dial100', '10.134.17.165', '72014', 'CP-7821-K9', 'WZP20330YQ8', 'Yes'),
+(45, 'HZB', 'Chatra', 'Agent 1', 'Dial100', '10.134.17.99', '70411', 'CP-7821-K9', 'WZP2033105K', 'Installed'),
+(46, 'HZB', 'Chatra', 'Agent2', 'Dial100', '10.134.17.100', '70412', 'CP-7821-K9', 'WZP20330YJM', 'Installed'),
+(47, 'HZB', 'Chatra', 'Agent 3', 'Dial100', '10.134.17.101', '70413', 'CP-7821-K9', 'WZP2033OYM1', 'Installed'),
+(48, 'HZB', 'Chatra', 'Agent 4', 'Dial100', '10.134.17.102', '70414', 'CP-7821-K9', 'WZP2033OYNZ', 'Installed'),
+(49, 'DHN', 'Dhanbad', 'Agent 1', 'Dial100', '10.134.16.42', '70211', 'CP-7821-K9', 'WZP20330QXE', 'Yes'),
+(50, 'DHN', 'Dhanbad', 'Agent2', 'Dial100', '10.134.16.38', '70212', 'CP-7821-K9', 'WZP20330PUG', 'Yes'),
+(51, 'DHN', 'Dhanbad', 'Agent 3', 'Dial100', '10.134.16.45', '70213', 'CP-7821-K9', 'WZP20330PUF', 'Yes'),
+(52, 'DHN', 'Dhanbad', 'Agent 4', 'Dial100', '10.134.16.40', '70214', 'CP-7821-K9', 'WZP20330PVM', 'Yes'),
+(53, 'DHN', 'Dhanbad', 'Agent 5', 'Dial100', '10.134.16.39', '70215', 'CP-7821-K9', 'WZP20330YRV', 'Yes'),
+(54, 'DHN', 'Dhanbad', 'Agent 6', 'Dial100', '10.134.16.41', '70216', 'CP-7821-K9', 'WZP20330YMN', 'Yes'),
+(55, 'DHN', 'Dhanbad', 'DP02', 'Dial100', '10.134.16.43', '70217', 'CP-7821-K9', 'WZP20330YLU', 'Yes'),
+(56, 'DHN', 'Dhanbad', 'Agent 8', 'Dial100', '10.134.16.44', '70218', 'CP-7821-K9', 'WZP20330YOF', 'Yes'),
+(57, 'DHN', 'Dhanbad', 'DP03', 'Dial100', '10.134.16.35', '70219', 'CP-6941', '', 'YES'),
+(58, 'DHN', 'Bokaro', 'Agent 1', 'Dial1000', '10.134.16.71', '70811', 'CP-7821-K9', 'WZP20330Z98', 'Yes'),
+(59, 'DHN', 'Bokaro', 'Agent2', 'Dial100', '10.134.16.72', '70812', 'CP-7821-K9', 'WZP20330YOE', 'Yes'),
+(60, 'DHN', 'Bokaro', 'Agent 3', 'Dial100', '10.134.16.73', '70813', 'CP-7821-K9', 'WZP20330YP3', 'Yes'),
+(61, 'DHN', 'Bokaro', 'Agent 4', 'Dial100', '10.134.16.74', '70814', 'CP-7821-K9', 'WZP20330YT1', 'Yes'),
+(62, 'DHN', 'Bokaro', 'Agent 5', 'Dial100', '10.134.16.75', '70815', 'CP-7821-K9', 'WZP20330YLG', 'Yes'),
+(63, 'DHN', 'Bokaro', 'Agent 6', 'Dial100', '10.134.16.76', '70816', 'CP-7821-K9', 'WZP20330YNU', 'Yes'),
+(64, 'DHN', 'Bokaro', 'Agent 7', 'Dial100', '10.134.16.69', '70817', 'CP-7821-K9', 'WZP20330YMA', 'Yes'),
+(65, 'DHN', 'Bokaro', 'Agent 8', 'Dial100', '10.134.16.70', '70818', 'CP-7821-K9', 'WZP20330YSD', 'Yes'),
+(66, 'DMK', 'Dumka', 'Agent 1', 'Dial100', '10.134.16.141', '72211', 'CP-7821-K9', 'WZP20330YPY', 'Yes'),
+(67, 'DMK', 'Dumka', 'Agent2', 'Dial100', '10.134.16.142', '72212', 'CP-7821-K9', 'WZP2033YPA', 'Yes'),
+(68, 'DMK', 'Dumka', 'Agent 3', 'Dial100', '10.134.16.143', '72213', 'CP-7821-K9', 'WZP20330YP6', 'Yes'),
+(69, 'DMK', 'Dumka', 'Agent 4', 'Dial100', '10.134.16.144', '72214', 'CP-7821-K9', 'WZP20330YMV', 'Yes'),
+(70, 'DMK', 'Dumka', 'Agent 5', 'Dial100', '10.134.16.145', '72215', 'CP-7821-K9', 'WZP20330YP1', 'Yes'),
+(71, 'DMK', 'Dumka', 'Agent 6', 'Dial100', '10.134.16.146', '72216', 'CP-7821-K9', 'WZP20330YN5', 'Yes'),
+(72, 'DMK', 'Dumka', 'Agent 7', 'Dial100', '10.134.16.147', '72217', 'CP-7821-K9', 'WZP20330YMP', 'Yes'),
+(73, 'DMK', 'Dumka', 'Agent 8', 'Dial100', '10.134.16.148', '72218', 'CP-7821-K9', 'WZP20330YXB', 'Yes'),
+(74, 'DMK', 'Godda', 'Agent 1', 'Dial100', '10.134.17.51', '72811', 'CP-7821-K9', 'WZP20330YR9', 'Yes'),
+(75, 'DMK', 'Godda', 'Agent2', 'Dial100', '10.134.17.52', '72812', 'CP-7821-K9', 'WZP20330YML', 'Yes'),
+(76, 'DMK', 'Godda', 'Agent 3', 'Dial100', '10.134.17.53', '72813', 'CP-7821-K9', 'WZP20330YLR', 'Yes'),
+(77, 'DMK', 'Godda', 'Agent 4', 'Dial100', '10.134.17.54', '72814', 'CP-7821-K9', 'WZP20330YLZ', 'Yes'),
+(78, 'DMK', 'Sahebgunj', 'Agent 1', 'Dial100', '10.134.17.247', '73011', 'CP-7821-K9', 'WZP20330YNX', 'Yes'),
+(79, 'DMK', 'Sahebgunj', 'Agent2', 'Dial100', '10.134.17.248', '73012', 'CP-7821-K9', 'WZT20330YNS', 'Yes'),
+(80, 'DMK', 'Sahebgunj', 'Agent 3', 'Dial100', '10.134.17.249', '73013', 'CP-7821-K9', 'WZT20330YT3', 'Yes'),
+(81, 'DMK', 'Sahebgunj', 'Agent 4', 'Dial100', '10.134.17.250', '73014', 'CP-7821-K9', 'WZT20330YV9', 'Yes'),
+(82, 'DMK', 'Pakur', 'Agent 1', 'Dial100', '10.134.17.228', '73212', 'CP-7821-K9', 'WZP20330Q38', 'Yes'),
+(83, 'DMK', 'Pakur', 'Agent2', 'Dial100', '10.134.17.229', '73213', 'CP-7821-K9', 'WZP20330PUJ', 'Yes'),
+(84, 'DMK', 'Pakur', 'Agent 3', 'Dial100', '10.134.17.230', '73214', 'CP-7821-K9', 'WZP20330QUC', 'Yes'),
+(85, 'DMK', 'Pakur', 'Agent 4', 'Dial100', '10.134.17.231', '73211', 'CP-7821-K9', 'WZP20330Q95', 'Yes'),
+(86, 'DMK', 'Deoghar', 'Agent 1', 'Dial100', '10.134.16.3', '72611', 'CP-7821-K9', 'WZP20330YRQ', 'Yes'),
+(87, 'DMK', 'Deoghar', 'Agent2', 'Dial100', '10.134.16.4', '72612', 'CP-7821-K9', 'WZP20330YNI', 'Yes'),
+(88, 'DMK', 'Deoghar', 'Agent 3', 'Dial100', '10.134.16.5', '72613', 'CP-7821-K9', 'WZP20330VGM', 'Yes'),
+(89, 'DMK', 'Deoghar', 'Agent 4', 'Dial100', '10.134.16.6', '72614', 'CP-7821-K9', 'WZP20330YPS', 'Yes'),
+(90, 'DMK', 'Deoghar', 'Agent 5', 'Dial100', '10.134.16.7', '72615', 'CP-7821-K9', 'WZP20330YM8', 'Yes'),
+(91, 'DMK', 'Deoghar', 'Agent 6', 'Dial100', '10.134.16.8', '72616', 'CP-7821-K9', 'WZP20330YLB', 'Yes'),
+(92, 'DMK', 'Deoghar', 'Agent 7', 'Dial100', '10.134.16.9', '72617', 'CP-7821-K9', 'WZP20330YMJ', 'Yes'),
+(93, 'DMK', 'Deoghar', 'Agent 8', 'Dial100', '10.134.16.10', '72618', 'CP-7821-K9', 'WZP20330YLQ', 'Yes'),
+(94, 'DMK', 'Jamtara', 'Agent 1', 'Dial100', '10.134.17.83', '73611', 'CP-7821-K9', 'WZP20330YLV', 'Yes'),
+(95, 'DMK', 'Jamtara', 'Agent2', 'Dial100', '10.134.17.84', '73612', 'CP-7821-K9', 'WZP20330YLT', 'Yes'),
+(96, 'DMK', 'Jamtara', 'Agent 3', 'Dial100', '10.134.17.85', '73613', 'CP-7821-K9', 'WZP20330YMO', 'Yes'),
+(97, 'DMK', 'Jamtara', 'Agent 4', 'Dial100', '10.134.17.86', '73614', 'CP-7821-K9', 'WZP20330YM6', 'Yes'),
+(98, 'JSR', 'Jamshedpur', 'Agent 1', 'Dial100', '10.134.16.162', '71611', 'CP-7821-K9', 'WZP20330Q4Q', 'Yes'),
+(99, 'JSR', 'Jamshedpur', 'Agent2', 'Dial100', '10.134.16.163', '71612', 'CP-7821-K9', 'WZP20330PVJ', 'Yes'),
+(100, 'JSR', 'Jamshedpur', 'Agent 3', 'Dial100', '10.134.16.164', '71613', 'CP-7821-K9', 'WZP20330Q2Q', 'Yes'),
+(101, 'JSR', 'Jamshedpur', 'Agent 4', 'Dial100', '10.134.16.165', '71614', 'CP-7821-K9', 'WZP20330PTU', 'Yes'),
+(102, 'JSR', 'Jamshedpur', 'Agent 5', 'Dial100', '10.134.16.166', '71615', 'CP-7821-K9', 'WZP20330PUK', 'Yes'),
+(103, 'JSR', 'Jamshedpur', 'Agent 6', 'Dial100', '10.134.16.167', '71616', 'CP-7821-K9', 'WZP20330PVH', 'Yes'),
+(104, 'JSR', 'Jamshedpur', 'Agent 7', 'Dial100', '', '', 'CP-7821-K9', 'WZP20330Q9E', ''),
+(105, 'JSR', 'Jamshedpur', 'Agent 8', 'Dial100', '10.134.16.169', '71618', 'CP-7821-K9', 'WZP20330PUW', 'Yes'),
+(106, 'JSR', 'Jamshedpur', 'Agent 9', 'Dial100', '10.134.16.170', '71617', 'CP-6941', 'PUC1790K9U', 'Yes'),
+(107, 'JSR', 'Chaibasa', 'Agent 1', 'Dial100', '10.134.17.11', '74211', 'CP-7821-K9', 'WZP20330YMD', 'Yes'),
+(108, 'JSR', 'Chaibasa', 'Agent2', 'Dial100', '', '', 'CP-7821-K9', 'WZP20330W9L', 'Yes'),
+(109, 'JSR', 'Chaibasa', 'Agent 3', 'Dial100', '10.134.17.13', '74213', 'CP-7821-K9', 'WZP20330YNK', 'Yes'),
+(110, 'JSR', 'Chaibasa', 'Agent 4', 'Dial100', '10.134.17.10', '74212', 'CP-7821-K9', 'WZP20330YMM', 'Yes'),
+(111, 'JSR', 'Chaibasa', 'Agent 5', 'Dial100', '10.134.17.12', '74214', 'CP-6941', 'PUC17190KMB', 'Yes'),
+(112, 'JSR', 'Saraikela', 'Agent 1', 'Dial100', '10.134.17.201', '71413', 'CP-7821-K9', 'WZP20330YPJ', 'Yes'),
+(113, 'JSR', 'Saraikela', 'Agent2', 'Dial100', '10.134.17.202', '71414', 'CP-6941', 'PUC17190K4U', 'Yes'),
+(114, 'JSR', 'Saraikela', 'Agent 3', 'Dial100', '10.134.17.199', '71411', 'CP-7821-K9', 'WZP20330YRX', 'Yes'),
+(115, 'JSR', 'Saraikela', 'Agent 4', 'Dial100', '10.134.17.200', '71412', 'CP-7821-K9', 'WZP20330YP9', 'Yes'),
+(116, 'JSR', 'Saraikela', 'Agent 5', 'Dial100', '10.134.17.204', '', 'CP-7821-K9', 'WZP20330ZVX', 'No'),
+(117, 'PAL', 'Palamu', 'Agent 1', 'Dial100', '10.134.17.179', '71811', 'CP-7821-K9', 'WZP20330Q2D', 'Yes'),
+(118, 'PAL', 'Palamu', 'Agent2', 'Dial100', '10.134.17.180', '71812', 'CP-7821-K9', 'WZP20330PUN', 'Yes'),
+(119, 'PAL', 'Palamu', 'Agent 3', 'Dial100', '10.134.17.181', '71813', 'CP-7821-K9', 'WZP20330PUO', 'Yes'),
+(120, 'PAL', 'Palamu', 'Agent 4', 'Dial100', '10.134.17.182', '71814', 'CP-7821-K9', 'WZP20330PUV', 'Yes'),
+(121, 'PAL', 'Garhwa', 'Agent 1', 'Dial100', '10.134.17.35', '70611', 'CP-7821-K9', 'WZP20330YMW', 'Yes'),
+(122, 'PAL', 'Garhwa', 'Agent2', 'Dial100', '  10.134.17.36', '70612', 'CP-7821-K9', 'WZP20330YM9', 'Yes'),
+(123, 'PAL', 'Garhwa', 'Agent 3', 'Dial100', '10.134.17.37', '70613', 'CP-7821-K9', 'WZP20330YJY', 'Yes'),
+(124, 'PAL', 'Garhwa', 'Agent 4', 'Dial100', '10.134.17.38', '70614', 'CP-7821-K9', 'WZP20330YQI', 'Yes'),
+(125, 'PAL', 'Latehar', 'Agent 1', 'Dial100', '10.134.17.131', '73811', 'CP-7821-K9', 'WZP20330YRO', 'Yes'),
+(126, 'PAL', 'Latehar', 'Agent2', 'Dial100', '10.134.17.132', '73812', 'CP-7821-K9', '  WZP20330YMB', 'Yes'),
+(127, 'PAL', 'Latehar', 'Agent 3', 'Dial100', '10.134.17.133', '73813', 'CP-7821-K9', 'WZP20330YO4', 'Yes'),
+(128, 'PAL', 'Latehar', 'Agent 4', 'Dial100', '10.134.17.134', '73814', 'CP-7821-K9', 'WZP20330YQN', 'Yes'),
+(129, 'test', 'test', 'test', 'test', '10.134.2.2', '55242', 'fasdf', 'fadsf', 'drfrgdf');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `additional_data`
+--
+ALTER TABLE `additional_data`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `all_ip_phones`
+--
+ALTER TABLE `all_ip_phones`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dashboard`
+--
+ALTER TABLE `dashboard`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `directory`
+--
+ALTER TABLE `directory`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ip_phones`
+--
+ALTER TABLE `ip_phones`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `additional_data`
+--
+ALTER TABLE `additional_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `all_ip_phones`
+--
+ALTER TABLE `all_ip_phones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=460;
+
+--
+-- AUTO_INCREMENT for table `dashboard`
+--
+ALTER TABLE `dashboard`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `directory`
+--
+ALTER TABLE `directory`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+
+--
+-- AUTO_INCREMENT for table `ip_phones`
+--
+ALTER TABLE `ip_phones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
